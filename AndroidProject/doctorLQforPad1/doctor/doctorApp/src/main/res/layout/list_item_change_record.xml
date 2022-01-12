@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="4dp"
+        android:layout_height="4dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_time"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/list_item_time"
+        app:srcCompat="@drawable/shape_add_drugs_point_style" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp"
+        android:text="2018-01-01"
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_hospital"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:text="安徽省立"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_time"
+        app:layout_constraintEnd_toStartOf="@+id/list_item_time"
+        app:layout_constraintStart_toEndOf="@+id/imageView20"
+        app:layout_constraintTop_toTopOf="@+id/list_item_time" />
+
+    <LinearLayout
+        android:id="@+id/list_item_line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_time">
+
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_line1">
+
+        <ImageView
+            android:id="@+id/list_item_ill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_person" />
+
+        <com.company.linquan.app.view.MyTextView
+            android:id="@+id/list_item_ill_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="患者名称"
+            android:textColor="#525252"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintLeft_toRightOf="@+id/list_item_ill"
+            app:layout_constraintTop_toTopOf="@+id/list_item_ill" />
+
+        <com.company.linquan.app.view.MyTextView
+            android:id="@+id/list_item_ill_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="患者"
+            android:textColor="#e8e8e8"
+            android:textSize="@dimen/font_12"
+            app:layout_constraintBottom_toBottomOf="@+id/list_item_ill"
+            app:layout_constraintLeft_toLeftOf="@+id/list_item_ill_name" />
+
+        <ImageView
+            android:id="@+id/list_item_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/list_item_ill"
+            app:layout_constraintLeft_toRightOf="@+id/list_item_ill_name"
+            app:layout_constraintTop_toTopOf="@+id/list_item_ill"
+            app:srcCompat="@drawable/img_auth_more" />
+
+        <ImageView
+            android:id="@+id/list_item_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/list_item_ill"
+            app:layout_constraintLeft_toRightOf="@+id/list_item_arrow"
+            app:layout_constraintTop_toTopOf="@+id/list_item_ill"
+            app:srcCompat="@drawable/img_person" />
+
+        <com.company.linquan.app.view.MyTextView
+            android:id="@+id/list_item_doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:text="医生"
+            android:textColor="#525252"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintLeft_toRightOf="@+id/list_item_doctor"
+            app:layout_constraintTop_toTopOf="@+id/list_item_doctor" />
+
+        <com.company.linquan.app.view.MyTextView
+            android:id="@+id/list_item_doctor_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="医生"
+            app:layout_constraintBottom_toBottomOf="@+id/list_item_doctor"
+            app:layout_constraintLeft_toLeftOf="@+id/list_item_doctor_name" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>

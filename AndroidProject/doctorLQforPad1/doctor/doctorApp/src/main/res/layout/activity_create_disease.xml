@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/list_item_line10"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout">
+
+    </LinearLayout>
+
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="分组名称"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_line10" />
+
+    <com.company.linquan.app.view.DelEditText
+        android:id="@+id/disease_group_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView20"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView20"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView20" >
+
+
+    </com.company.linquan.app.view.DelEditText>
+
+
+    <LinearLayout
+        android:id="@+id/line6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/create_disease_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView20"></LinearLayout>
+
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/create_disease_btn"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/base_red_color"
+        android:gravity="center"
+        android:text="确定创建"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

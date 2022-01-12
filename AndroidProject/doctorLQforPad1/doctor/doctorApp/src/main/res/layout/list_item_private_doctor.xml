@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:layout_marginBottom="5dp">
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="编号"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_list_private_doctor_price"
+        android:text="￥130"
+        android:textColor="@color/base_red_color"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_num"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/list_item_num" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_num"></LinearLayout>
+
+    <com.company.linquan.app.view.RoundImageView
+        android:id="@+id/list_item_photo"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        android:background="@drawable/img_person" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="名字"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_photo"
+        app:layout_constraintTop_toTopOf="@+id/list_item_photo" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20180617"
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_photo"
+        app:layout_constraintLeft_toLeftOf="@+id/list_item_name" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="一个月服务"
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_photo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/list_item_photo" />
+</android.support.constraint.ConstraintLayout>

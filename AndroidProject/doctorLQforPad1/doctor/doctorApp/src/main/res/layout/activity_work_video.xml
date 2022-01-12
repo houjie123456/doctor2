@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/layout_head"
+        layout="@layout/layout_head_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/list_item_line1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_head"></LinearLayout>
+
+    <include
+        android:id="@+id/video_left_layout"
+        layout="@layout/list_item_face"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_item_line1"></include>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/work_video_recycler"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/video_left_layout"
+        app:layout_constraintLeft_toRightOf="@id/video_left_layout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/video_left_layout">
+
+    </android.support.v7.widget.RecyclerView>
+    <!--<com.company.doctor.app.view.CommonRecyclerView-->
+    <!--android:id="@+id/work_voice_recycler"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/list_item_line1"-->
+    <!--android:layout_marginTop="5dp">-->
+
+    <!--</com.company.doctor.app.view.CommonRecyclerView>-->
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/work_video_recycler">
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/work_video_mid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_work_face_setting" />
+
+        <com.company.linquan.app.view.MyTextView
+            android:id="@+id/myTextView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="2dp"
+            android:text="发布出诊"
+            android:textColor="#353535"
+            android:textSize="@dimen/font_16"
+            app:layout_constraintLeft_toRightOf="@+id/imageView11"
+            app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+        <com.company.linquan.app.view.MyTextView
+            android:id="@+id/myTextView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginBottom="2dp"
+            android:text="根据您的病情选择合适医生"
+            android:textColor="#8e8e8e"
+            android:textSize="@dimen/font_13"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintLeft_toRightOf="@+id/imageView11" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView11"
+            app:srcCompat="@drawable/img_auth_more" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/work_video_mid_layout">
+
+        <com.company.linquan.app.view.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="语音问诊记录"
+            android:textColor="#8e8e8e"
+            android:textSize="@dimen/font_13" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list_item_head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line3">
+
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_circle"></LinearLayout>
+
+        <com.company.linquan.app.view.MyTextView
+            android:id="@+id/video_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="8:00-9:00"
+            android:textColor="#525252"
+            android:textSize="@dimen/font_16" />
+
+        <com.company.linquan.app.view.MyTextView
+            android:id="@+id/video_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="￥150"
+            android:textColor="#525252"
+            android:textSize="@dimen/font_16" />
+
+        <com.company.linquan.app.view.MyTextView
+            android:id="@+id/video_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="5人"
+            android:textColor="#525252"
+            android:textSize="@dimen/font_16" />
+
+        <Button
+            android:id="@+id/video_stop_btn"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_corner"
+            android:text="停诊"
+            android:textColor="#ff747d"
+            android:textSize="@dimen/font_16" />
+
+
+        <!--<com.company.doctor.app.view.MyTextView-->
+        <!--android:id="@+id/list_item_hospital"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="right"-->
+        <!--android:text="安徽省立医院"-->
+        <!--android:textColor="#525252"-->
+        <!--android:textSize="@dimen/font_13" />-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/list_item_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_head_layout"></LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/work_video_record_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_work_bg_style"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_head_layout" />
+
+</android.support.constraint.ConstraintLayout>

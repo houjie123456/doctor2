@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff">
+
+    <include
+        android:id="@+id/layout_head"
+        layout="@layout/layout_head_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/mid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_head">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/face_head_txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_14"
+                android:textColor="#525252"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="所在区域"/>
+
+            <ImageView
+                android:id="@+id/face_head_image1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_order_face_down"
+                app:layout_constraintTop_toTopOf="@id/face_head_txt1"
+                app:layout_constraintBottom_toBottomOf="@id/face_head_txt1"
+                app:layout_constraintLeft_toRightOf="@id/face_head_txt1"/>
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_red_color"
+                app:layout_constraintLeft_toLeftOf="@id/face_head_txt1"
+                app:layout_constraintRight_toRightOf="@id/face_head_image1"
+                app:layout_constraintTop_toBottomOf="@id/face_head_txt1" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/face_head_txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_14"
+                android:textColor="#525252"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="所在科室"/>
+
+            <ImageView
+                android:id="@+id/face_head_image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_order_face_down"
+                app:layout_constraintTop_toTopOf="@id/face_head_txt2"
+                app:layout_constraintBottom_toBottomOf="@id/face_head_txt2"
+                app:layout_constraintLeft_toRightOf="@id/face_head_txt2"/>
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_red_color"
+                app:layout_constraintLeft_toLeftOf="@id/face_head_txt2"
+                app:layout_constraintRight_toRightOf="@id/face_head_image2"
+                app:layout_constraintTop_toBottomOf="@id/face_head_txt2" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/face_head_txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_14"
+                android:textColor="#525252"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="职位职称"/>
+
+            <ImageView
+                android:id="@+id/face_head_image3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_order_face_down"
+                app:layout_constraintTop_toTopOf="@id/face_head_txt3"
+                app:layout_constraintBottom_toBottomOf="@id/face_head_txt3"
+                app:layout_constraintLeft_toRightOf="@id/face_head_txt3"/>
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/base_red_color"
+                app:layout_constraintLeft_toLeftOf="@id/face_head_txt3"
+                app:layout_constraintRight_toRightOf="@id/face_head_image3"
+                app:layout_constraintTop_toBottomOf="@id/face_head_txt3" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/order_face_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#fff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mid_layout"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/order_face_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

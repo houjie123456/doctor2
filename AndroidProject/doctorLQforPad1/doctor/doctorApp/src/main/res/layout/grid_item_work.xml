@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:background="#f4f4f4"
+    android:paddingTop="10dp">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="220dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/layer_work_bg_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.company.linquan.app.view.MyTextView
+            android:id="@+id/grid_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="标题"
+            android:textColor="#353535"
+            android:textSize="@dimen/font_18"
+            app:layout_constraintHorizontal_bias="0.237"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/grid_item_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="35dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/grid_item_name"
+            app:layout_constraintRight_toRightOf="@+id/grid_item_name"
+            app:layout_constraintTop_toBottomOf="@+id/grid_item_name"
+            app:srcCompat="@drawable/img_work_doctor" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

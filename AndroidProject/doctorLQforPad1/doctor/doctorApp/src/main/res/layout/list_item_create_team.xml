@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="#fff"
+    android:layout_marginBottom="2dp">
+
+    <ImageView
+        android:id="@+id/list_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_stop_face_selected"
+        app:layout_constraintTop_toTopOf="@+id/list_item_photo"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_photo"/>
+
+    <com.company.linquan.app.view.RoundImageView
+        android:id="@+id/list_item_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_image"
+        android:background="@drawable/img_doctor_temp" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        android:text="名字"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_photo"
+        app:layout_constraintTop_toTopOf="@+id/list_item_photo" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="主治医生"
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_name"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_name" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="呼吸内科"
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_photo"
+        app:layout_constraintLeft_toLeftOf="@+id/list_item_name" />
+</android.support.constraint.ConstraintLayout>

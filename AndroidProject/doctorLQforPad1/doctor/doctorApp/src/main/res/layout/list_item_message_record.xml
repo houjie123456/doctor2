@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="26dp"
+        android:text="姓名"
+        android:textColor="#1f67f5"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="26dp"
+        android:text="00:00"
+        android:textColor="#1f67f5"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="啊"
+        android:textColor="#777"
+        android:textSize="@dimen/font_13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_name"/>
+    <com.company.linquan.app.util.MyImageView
+        android:id="@+id/list_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/default_img"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_name"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/list_item_voice_btn"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_corner"
+        android:text="点击播放语音"
+        android:textColor="#ff747d"
+        android:textSize="@dimen/font_16"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_name"
+        android:visibility="gone"/>
+    <!--<LinearLayout-->
+        <!--android:id="@+id/list_item_line1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#f4f4f4"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/list_item_txt"></LinearLayout>-->
+
+</android.support.constraint.ConstraintLayout>

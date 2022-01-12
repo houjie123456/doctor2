@@ -1,0 +1,209 @@
+apply plugin: 'com.android.application'
+//网易云
+
+//网易云End
+android {
+    useLibrary 'org.apache.http.legacy'
+    signingConfigs {
+        doctor {
+            keyAlias 'linquan'
+            keyPassword 'linquan'
+            storeFile file('D:/AndroidProject/doctorLQ/doctor.jks')
+//            storeFile file('/Users/jingjing/Desktop/jingjing/Android Project/doctor/doctor.jks')
+            storePassword 'linquan'
+        }
+    }
+
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.company.linquan.app"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 9
+        versionName "1.4.2"
+//        versionCode 5
+//        versionName "1.3.1"
+//        versionCode 4
+//        versionName "1.3"
+        //网易云Start
+//        buildConfigField "String", "GIT_REVISION", "\"${getGitVersion()}\""
+        buildConfigField "String", "BUILD_DATE", "\"${new Date().toLocaleString()}\""
+        //网易云End
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk{
+            abiFilters "armeabi","armeabi-v7a", "x86", "x86_64","arm64-v8a"//,"arm64-v8a", "x86","arm64-v8a","x86_64"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.doctor
+            //网易云Start
+            //网易云End
+        }
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.doctor
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs'] //这一句是设置目标的so存放路径，也就是组装到apk中的so路径
+            jni.srcDirs = []  //这一句是禁用gradle默认的ndk-build，防止AS自己生成android.mk编译jni工程
+            //网易云Start
+            //网易云End
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    //网易云Start
+    //网易云End
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '28.0.0'
+                }
+            }
+        }
+    }
+    packagingOptions {//加上这些代码
+        pickFirst 'lib/arm64-v8a/libne_audio.so'
+        pickFirst 'lib/x86_64/libne_audio.so'
+        pickFirst 'lib/x86/libne_audio.so'
+        pickFirst 'lib/armeabi-v7a/libne_audio.so'
+        pickFirst 'assets/nim_keystore'
+        pickFirst 'assets/nim_keystore2'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+//    implementation ("com.android.support:appcompat-v7:28.0.0"){force true}
+    implementation 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+//    implementation ('com.android.support.constraint:constraint-layout:1.0.0-alpha9'){force true}
+    testImplementation 'junit:junit:4.12'
+//    testImplementation ('junit:junit:4.12'){force true}
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+//    implementation ('com.android.support:recyclerview-v7:28.0.0'){force true}
+    implementation 'com.google.code.gson:gson:2.2.4'
+//    implementation ('com.google.code.gson:gson:2.2.4'){force true}
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+//    implementation ('com.squareup.okhttp3:okhttp:3.8.1'){force true}
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+//    implementation ('com.squareup.retrofit2:retrofit:2.3.0'){force true}
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+//    implementation ('com.squareup.retrofit2:converter-gson:2.1.0'){force true}
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    //编译RxJava
+    implementation 'io.reactivex:rxjava:1.1.6'
+    //编译RxAndroid
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation(name: 'LiteAVSDK_Professional_4.9.4663', ext: 'aar')
+//    implementation files('libs/glide-3.6.1.jar')
+    implementation 'com.lovedise:permissiongen:0.0.6'
+    implementation files('libs/core_3.2.0.jar')
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    implementation 'cn.aigestudio.datepicker:DatePicker:2.2.0'
+    implementation 'com.github.flavienlaurent.datetimepicker:library:0.0.2'
+    implementation 'com.amap.api:location:4.1.0'
+    implementation 'com.amap.api:map2d:5.2.0'
+    implementation 'com.amap.api:search:6.1.0'
+    implementation files('libs/MobCommons-2018.0704.1311.jar')
+    implementation files('libs/MobTools-2018.0704.1157.jar')
+    implementation files('libs/ShareSDK-Core-3.2.1.jar')
+    implementation files('libs/ShareSDK-QQ-3.2.1.jar')
+    implementation files('libs/ShareSDK-QZone-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-Core-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-Favorite-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-Moments-3.2.1.jar')
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation files('libs/alipaySdk-20180601.jar')
+//    implementation files('libs/imsdk.jar')
+//    implementation files('libs/imsdk_group_ext.jar')
+//    implementation files('libs/imsdk_msg_ext.jar')
+//    implementation files('libs/imsdk_sns_ext.jar')
+//    implementation files('libs/mobilepb.jar')
+//    implementation files('libs/qalsdk.jar')
+//    implementation files('libs/tls_sdk.jar')
+//    implementation files('libs/wup-1.0.0-SNAPSHOT.jar')
+//    implementation files('libs/imsdk_ugc_ext.jar')
+    //实时音视频sdk 其中latest.release指代最新iLiveSDK版本号
+//    implementation 'com.tencent.ilivesdk:ilivesdk:latest.release'
+//    compile 'com.tencent.ilivesdk:ilivesdk:1.9.4.0.1'
+//    implementation 'com.tencent.imsdk:imsdk:3.3.2.13870.14059'
+//    implementation 'com.tencent.ilivefilter:liteav_normal:1.1.21'
+//    implementation 'com.github.bumptech.glide:glide:4.5.0'
+//    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+    implementation 'org.slf4j:slf4j-api:1.7.21'
+    //PhotoView
+    implementation 'com.github.chrisbanes.photoview:library:+'
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+
+    implementation files('libs/MiPush_SDK_Client_3_6_2.jar')
+    implementation files('libs/nim-push-6.1.2.jar')
+    // 添加依赖。注意，版本号必须一致。
+    implementation project(path: ':uikit')
+//    // 基础功能 (必需)
+//    implementation 'com.netease.nimlib:basesdk:6.1.1'
+//    // 音视频和互动白板服务需要
+//    implementation 'com.netease.nimlib:nrtc:6.1.1'
+//    // 音视频需要
+//    implementation 'com.netease.nimlib:avchat:6.1.1'
+//    // 聊天室需要
+//    implementation 'com.netease.nimlib:chatroom:6.1.1'
+//    // 互动白板服务需要
+//    implementation 'com.netease.nimlib:rts:6.1.1'
+//    // 全文检索服务需要
+//    implementation 'com.netease.nimlib:lucene:6.1.1'
+//    // 小米、华为、魅族、fcm 推送
+//    implementation 'com.netease.nimlib:push:6.1.1'
+    implementation 'com.google.firebase:firebase-messaging:11.6.0'
+    implementation 'com.google.android.gms:play-services-base:11.6.0'
+
+    implementation 'com.meizu.flyme.internet:push-internal:3.6.3@aar'
+    implementation 'com.huawei.android.hms:push:2.6.0.301'
+
+    implementation 'com.netease.nimlib:jsbridge:1.3.1'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
+        transitive = true
+    }
+
+    // ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+    // Java8 support for Lifecycles
+    implementation "android.arch.lifecycle:common-java8:1.1.0"
+
+    implementation 'com.github.HanHuoBin:BaseDialog:1.2.0'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+
+    implementation 'com.github.codbking:PickTime:v1.0.1'
+}
+

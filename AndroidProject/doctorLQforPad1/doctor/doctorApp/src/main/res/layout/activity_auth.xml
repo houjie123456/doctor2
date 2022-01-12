@@ -1,0 +1,1064 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/line8"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="2dp"-->
+        <!--android:background="@color/line_gray_bg"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--android:visibility="gone"></LinearLayout>-->
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="实名认证"
+                android:textColor="#3b3b3b"
+                android:textSize="@dimen/font_18"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:text="请填写实名认证所需资料"
+                android:textColor="#a7a7a7"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView3" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:text="姓名"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView5" />
+
+            <EditText
+                android:id="@+id/auth_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="#fff"
+                android:ems="10"
+                android:gravity="right|center"
+                android:hint="请输入真实姓名"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="#3b3b3b"
+                android:textColorHint="#a8a8a8"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView6"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/myTextView6"
+                app:layout_constraintTop_toTopOf="@+id/myTextView6" />
+
+            <LinearLayout
+                android:id="@+id/list_item_line1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView6"></LinearLayout>
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView81"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="性别"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/list_item_line1" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/auth_sex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="right|center"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="请选择性别"
+                android:textColor="#525252"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView81"
+                app:layout_constraintEnd_toStartOf="@+id/imageView71"
+                app:layout_constraintStart_toEndOf="@+id/myTextView81"
+                app:layout_constraintTop_toTopOf="@+id/myTextView81" />
+
+            <ImageView
+                android:id="@+id/imageView71"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView81"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myTextView81"
+                app:srcCompat="@drawable/img_auth_more" />
+
+            <LinearLayout
+                android:id="@+id/line31"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView81"></LinearLayout>
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="身份证"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line31" />
+
+            <EditText
+                android:id="@+id/auth_idCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:background="#fff"
+                android:ems="10"
+                android:gravity="right|center"
+                android:hint="请输入身份证号码"
+                android:digits="0123456789qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+                android:padding="10dp"
+                android:textColor="#3b3b3b"
+                android:textColorHint="#a8a8a8"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView7"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/myTextView7"
+                app:layout_constraintTop_toTopOf="@+id/myTextView7" />
+
+            <LinearLayout
+                android:id="@+id/line2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView7"></LinearLayout>
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="类型"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/auth_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="right|center"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="请选择职业类型"
+                android:textColor="#525252"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView8"
+                app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                app:layout_constraintStart_toEndOf="@+id/myTextView8"
+                app:layout_constraintTop_toTopOf="@+id/myTextView8" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView8"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myTextView8"
+                app:srcCompat="@drawable/img_auth_more" />
+
+            <LinearLayout
+                android:id="@+id/line3"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView8"></LinearLayout>
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="职称"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/auth_position"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="right|center"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="请选择您的职称"
+                android:textColor="#525252"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView9"
+                app:layout_constraintEnd_toStartOf="@+id/imageView8"
+                app:layout_constraintStart_toEndOf="@+id/myTextView9"
+                app:layout_constraintTop_toTopOf="@+id/myTextView9" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView9"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myTextView9"
+                app:srcCompat="@drawable/img_auth_more" />
+
+            <LinearLayout
+                android:id="@+id/line4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView9"></LinearLayout>
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="医院"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/auth_hospital"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="right|center"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="请选择您所在的医院"
+                android:textColor="#525252"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView11"
+                app:layout_constraintEnd_toStartOf="@+id/imageView10"
+                app:layout_constraintStart_toEndOf="@+id/myTextView11"
+                app:layout_constraintTop_toTopOf="@+id/myTextView11" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView11"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myTextView11"
+                app:srcCompat="@drawable/img_auth_more" />
+
+
+            <LinearLayout
+                android:id="@+id/line10"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView11">
+            </LinearLayout>
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="科室"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line10" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/auth_room"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="right|center"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="请选择您的科室"
+                android:textColor="#525252"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView10"
+                app:layout_constraintEnd_toStartOf="@+id/imageView9"
+                app:layout_constraintStart_toEndOf="@+id/myTextView10"
+                app:layout_constraintTop_toTopOf="@+id/myTextView10" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView10"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myTextView10"
+                app:srcCompat="@drawable/img_auth_more" />
+
+            <LinearLayout
+                android:id="@+id/line5"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView10"></LinearLayout>
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView192"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="工作年限"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line5" />
+
+            <EditText
+                android:id="@+id/auth_years"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:ems="10"
+                android:gravity="right|center"
+                android:hint="请输入工作年限"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textColor="#3b3b3b"
+                android:textColorHint="#a8a8a8"
+                android:textSize="@dimen/font_14"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView192"
+                app:layout_constraintRight_toLeftOf="@+id/myTextView1921"
+                app:layout_constraintLeft_toRightOf="@+id/myTextView192"
+                app:layout_constraintTop_toTopOf="@+id/myTextView192" />
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView1921"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:text="年"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line5" />
+
+            <LinearLayout
+                android:id="@+id/line1012"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView192"></LinearLayout>
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView191"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="是否为专科护士"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line1012" />
+            <Spinner
+                android:id="@+id/spinner_1"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:spinnerMode="dropdown"
+                android:dropDownWidth="80dp"
+                android:background="@drawable/shape_corner"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView191"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myTextView191"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="10dp"/>
+            <LinearLayout
+                android:id="@+id/line1011"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView191">
+            </LinearLayout>
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView101"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="护理类型(护士必选)"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line1011" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/auth_nurse_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="right|center"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="请选择护理服务类型"
+                android:textColor="#525252"
+                android:textSize="@dimen/font_14"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView101"
+                app:layout_constraintEnd_toStartOf="@+id/imageView101"
+                app:layout_constraintStart_toEndOf="@+id/myTextView101"
+                app:layout_constraintTop_toTopOf="@+id/myTextView101" />
+
+            <ImageView
+                android:id="@+id/imageView101"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView101"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myTextView101"
+                app:srcCompat="@drawable/img_auth_more" />
+
+
+            <LinearLayout
+                android:id="@+id/line101"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView101">
+            </LinearLayout>
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView102"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="护理名称(护士必选)"
+                android:textColor="#676767"
+                android:textSize="@dimen/font_16"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line101" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/auth_nurse_service"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="right|center"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:text="请选择护理服务名称"
+                android:textColor="#525252"
+                android:textSize="@dimen/font_14"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView102"
+                app:layout_constraintEnd_toStartOf="@+id/imageView102"
+                app:layout_constraintStart_toEndOf="@+id/myTextView102"
+                app:layout_constraintTop_toTopOf="@+id/myTextView102" />
+
+            <ImageView
+                android:id="@+id/imageView102"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView102"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myTextView102"
+                app:srcCompat="@drawable/img_auth_more" />
+
+
+            <LinearLayout
+                android:id="@+id/line102"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView102">
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@drawable/layer_work_bg_style"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line102"
+                ></android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/line103"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recycler_view">
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="简介(非必填)"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line103" />
+
+
+            <EditText
+                android:id="@+id/auth_person_remark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                android:lines="5"
+                android:gravity="top|left"
+                android:textColor="#525252"
+                android:background="#fff"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:hint="请输入您的简介"
+                android:textSize="@dimen/font_14"/>
+
+
+            <LinearLayout
+                android:id="@+id/line12"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auth_person_remark">
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textView101"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="擅长(非必填)"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line12" />
+
+
+            <EditText
+                android:id="@+id/auth_good_job"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView101"
+                android:lines="5"
+                android:gravity="top|left"
+                android:textColor="#525252"
+                android:background="#fff"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:hint="请输入您擅长的领域"
+                android:textSize="@dimen/font_14"/>
+
+
+            <LinearLayout
+                android:id="@+id/line121"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auth_good_job">
+            </LinearLayout>
+
+
+
+
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="头衔(非必填)"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line121" />
+
+
+            <EditText
+                android:id="@+id/auth_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12"
+                android:lines="5"
+                android:gravity="top|left"
+                android:textColor="#525252"
+                android:background="#fff"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:hint="请输入您获得的头衔"
+                android:textSize="@dimen/font_14"/>
+
+
+            <LinearLayout
+                android:id="@+id/line6"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auth_head">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="上传医师资格证书"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line6" />
+
+            <ImageView
+                android:id="@+id/auth_image1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                app:srcCompat="@drawable/img_auth_add" />
+
+            <ImageView
+                android:id="@+id/auth_image_temp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/auth_image1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/auth_image1"
+                app:srcCompat="@drawable/img_auth_temp_1" />
+
+
+            //-------------------
+
+            <LinearLayout
+                android:id="@+id/line601"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auth_image1">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="上传医师执业证书正面与背面"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line601" />
+
+            <ImageView
+                android:id="@+id/auth_image101"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView01"
+                app:srcCompat="@drawable/img_auth_add" />
+
+            <ImageView
+                android:id="@+id/auth_image102"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toRightOf="@id/auth_image101"
+                app:layout_constraintTop_toBottomOf="@+id/textView01"
+                app:srcCompat="@drawable/img_auth_add" />
+
+
+
+
+            <LinearLayout
+                android:id="@+id/line7"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auth_image101"
+                android:visibility="gone"></LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="上传医师胸牌"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line7"
+                android:visibility="gone"/>
+
+
+            <ImageView
+                android:id="@+id/auth_image3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:srcCompat="@drawable/img_auth_add"
+                android:visibility="gone"/>
+
+
+            <ImageView
+                android:id="@+id/auth_image_temp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2"
+                app:srcCompat="@drawable/img_auth_temp_3"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/line13"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auth_image3">
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="上传医师身份证正面与背面"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line13" />
+
+            <ImageView
+                android:id="@+id/auth_image5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                app:srcCompat="@drawable/img_auth_add" />
+
+            <ImageView
+                android:id="@+id/auth_image6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintLeft_toRightOf="@+id/auth_image5"
+                app:layout_constraintTop_toTopOf="@+id/auth_image5"
+                app:layout_constraintBottom_toBottomOf="@+id/auth_image5"
+                app:srcCompat="@drawable/img_auth_add" />
+
+            <ImageView
+                android:id="@+id/auth_image_temp5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/auth_image5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/auth_image5"
+                app:srcCompat="@drawable/img_auth_temp_4" />
+
+            <ImageView
+                android:id="@+id/auth_image_temp6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/auth_image_temp5"
+                app:layout_constraintRight_toLeftOf="@+id/auth_image_temp5"
+                app:layout_constraintTop_toTopOf="@+id/auth_image_temp5"
+                app:srcCompat="@drawable/img_auth_temp_5" />
+
+            <LinearLayout
+                android:id="@+id/line9"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auth_image5"></LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="上传医师头像"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line9" />
+
+            <ImageView
+                android:id="@+id/auth_image4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:srcCompat="@drawable/img_auth_add" />
+
+            <ImageView
+                android:id="@+id/auth_image_temp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3"
+                app:srcCompat="@drawable/img_auth_temp_6" />
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/auth_btn"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="25dp"
+                android:background="@color/base_red_color"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="#fff"
+                android:textSize="@dimen/font_18"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/auth_image4" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

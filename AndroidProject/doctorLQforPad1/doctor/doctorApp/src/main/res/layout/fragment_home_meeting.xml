@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <include
+        android:id="@+id/layout_head"
+        layout="@layout/layout_head_base"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.company.linquan.app.view.SearchBar
+        android:id="@+id/meeting_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_head">
+
+        <LinearLayout
+            android:id="@+id/main_head_1_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/main_head_1_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="即将开始"
+                android:textColor="@color/meeting_click_color"
+                android:textSize="@dimen/font_16" />
+
+            <LinearLayout
+                android:id="@+id/main_head_1_image"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/base_red_color"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_head_2_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/main_head_2_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正在进行"
+                android:textColor="@color/meeting_color"
+                android:textSize="@dimen/font_16" />
+
+            <LinearLayout
+                android:id="@+id/main_head_2_image"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/base_red_color"
+                android:orientation="vertical"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/main_head_3_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/main_head_3_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="以往会议"
+                android:textColor="@color/meeting_color"
+                android:textSize="@dimen/font_16" />
+
+            <LinearLayout
+                android:id="@+id/main_head_3_image"
+                android:layout_width="40dp"
+                android:layout_height="2dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/base_red_color"
+                android:orientation="vertical"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/meeting_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_layout"
+        android:background="@color/white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/meeting_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

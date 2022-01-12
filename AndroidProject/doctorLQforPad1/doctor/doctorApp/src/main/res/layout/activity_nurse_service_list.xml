@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <include
+        android:id="@+id/layout_head"
+        layout="@layout/layout_head_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/list_item_line1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_head"
+        android:background="#f4f4f4"></LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="开始时间"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_line1" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/nurse_start_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_14"
+        android:textColor="#525252"
+        android:gravity="right"
+        android:hint="请选择开始时间"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView18"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView18"
+        app:layout_constraintTop_toTopOf="@+id/myTextView18"
+        app:layout_constraintRight_toLeftOf="@+id/imageView14"
+        android:layout_marginRight="10dp">
+
+    </com.company.linquan.app.view.MyTextView>
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/img_create_face_down"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView18"
+        app:layout_constraintLeft_toRightOf="@+id/create_face_start_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView18"
+        android:layout_marginRight="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView18"></LinearLayout>
+
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="15dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="15dp"
+        android:text="结束时间"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/nurse_end_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_14"
+        android:textColor="#525252"
+        android:gravity="right"
+        android:hint="请选择结束时间"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView19"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView19"
+        app:layout_constraintTop_toTopOf="@+id/myTextView19"
+        app:layout_constraintRight_toLeftOf="@+id/imageView15"
+        android:layout_marginRight="10dp">
+
+    </com.company.linquan.app.view.MyTextView>
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/img_create_face_down"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView19"
+        app:layout_constraintLeft_toRightOf="@+id/create_face_end_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView19"
+        android:layout_marginRight="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/line401"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView19"></LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView_nurse"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_corner"
+        android:layout_marginTop="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="50dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="40dp"
+        android:text="请选择服务名称"
+        android:textSize="@dimen/font_14"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line401"/>
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="16dp"
+        app:srcCompat="@drawable/img_create_face_down"
+        app:layout_constraintRight_toRightOf="@+id/myTextView_nurse"
+        app:layout_constraintTop_toTopOf="@+id/myTextView_nurse" />
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView_state"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_corner"
+        android:paddingTop="10dp"
+        android:paddingLeft="50dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="40dp"
+        android:text="请选择服务状态"
+        android:textSize="@dimen/font_14"
+        android:visibility="visible"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView_nurse" />
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="16dp"
+        app:srcCompat="@drawable/img_create_face_down"
+        app:layout_constraintRight_toRightOf="@+id/myTextView_state"
+        app:layout_constraintTop_toTopOf="@+id/myTextView_nurse"/>
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView_nurse">
+
+        <com.company.linquan.app.view.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="护理服务记录"
+            android:textColor="#8e8e8e"
+            android:textSize="@dimen/font_13" />
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/work_nurse_record_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#f4f4f4"
+        android:layout_marginTop="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/work_nurse_record_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/layer_work_bg_style"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

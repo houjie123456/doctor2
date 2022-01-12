@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <com.company.linquan.app.view.MyTextView
+    android:id="@+id/myTextView22"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp"
+    android:paddingLeft="22dp"
+    android:paddingRight="22dp"
+    android:paddingTop="12dp"
+    android:text="护理类型"
+    android:textColor="#a8a8a8"
+    android:textSize="@dimen/font_14"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="安徽省立"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView22"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView22"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView22" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView221"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="12dp"
+        android:text="护理服务"
+        android:textColor="#a8a8a8"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView22"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="安徽省立"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView221"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView221"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView221" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView222"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="12dp"
+        android:text="护士姓名"
+        android:textColor="#a8a8a8"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView221"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="安徽省立"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView222"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView222"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView222" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="12dp"
+        android:text="护理金额"
+        android:textColor="#a8a8a8"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView222"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_money"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="100元"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView23"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView23"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView23" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="12dp"
+        android:text="护理时间"
+        android:textColor="#a8a8a8"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView23"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="100元"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView24"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView24"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView24" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="12dp"
+        android:text="护理人数"
+        android:textColor="#a8a8a8"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView24"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_person_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="100人"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView25"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView25"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView25" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="12dp"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp"
+        android:paddingTop="12dp"
+        android:text="护理状态"
+        android:textColor="#a8a8a8"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView25"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_face_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="护理中"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView26"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView26"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView26" />
+
+    <View
+        android:id="@+id/list_item_line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView26"
+        android:background="#f4f4f4"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/list_item_stop_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_item_line1"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_stop_face" />
+
+        <com.company.linquan.app.view.MyTextView
+            android:id="@+id/list_item_stop_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="停止护理"
+            android:textColor="#ff0000"
+            android:textSize="@dimen/font_15" />
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#f4f4f4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_item_stop_layout"/>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:paddingTop="15dp"
+    android:layout_marginTop="5dp">
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_ill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="初步诊断：慢行肺炎"
+        android:textColor="#000"
+        android:maxLines="1"
+        android:maxEms="15"
+        android:ellipsize="end"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="2018-06-13"
+        android:textColor="#525252"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_ill"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/list_item_ill" />
+
+    <LinearLayout
+        android:id="@+id/list_item_line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_ill"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/list_item_photo"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_line1"
+        app:srcCompat="@drawable/img_person" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="姓名"
+        android:textColor="#000"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_photo"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_photo"
+        app:layout_constraintTop_toTopOf="@+id/list_item_photo" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="用药"
+        android:textColor="#000"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_photo"
+        android:paddingBottom="15dp"/>
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_address"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/list_item_photo"
+        app:srcCompat="@drawable/img_auth_more" />
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView21"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout"
+        android:background="@drawable/img_team_detail_bg" />
+
+    <com.company.linquan.app.view.RoundImageView
+        android:id="@+id/team_detail_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintLeft_toLeftOf="@+id/imageView21"
+        app:layout_constraintTop_toTopOf="@+id/imageView21"
+        android:background="@drawable/img_doctor_temp" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/team_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="内科专家团队"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toRightOf="@+id/team_detail_photo"
+        app:layout_constraintTop_toTopOf="@+id/team_detail_photo" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/team_detail_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:text="团简单介绍"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintLeft_toLeftOf="@+id/team_detail_title"
+        app:layout_constraintTop_toBottomOf="@+id/team_detail_title" />
+
+    <ImageView
+        android:id="@+id/imageView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/team_detail_content"
+        app:layout_constraintLeft_toRightOf="@+id/team_detail_content"
+        app:srcCompat="@drawable/img_team_detail_white_down" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="0.25dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/team_detail_photo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_detail_photo">
+
+
+    </LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/team_detail_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="擅长:"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintLeft_toLeftOf="@+id/team_detail_photo"
+        app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+    <ImageView
+        android:id="@+id/imageView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/team_detail_info"
+        app:layout_constraintLeft_toRightOf="@+id/team_detail_info"
+        app:layout_constraintTop_toTopOf="@+id/team_detail_info"
+        app:srcCompat="@drawable/img_team_detail_white_down" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/team_detail_num"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="团内成员(1)"
+        android:textColor="#353535"
+        android:background="#FFF"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView21" />
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_detail_num"></LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/team_detail_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:background="#fff">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/line4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="10dp"
+        android:text="名医团记录"
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team_detail_recycler"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/team_detail_record_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line4"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:background="#fff">
+    </android.support.v7.widget.RecyclerView>
+</android.support.constraint.ConstraintLayout>

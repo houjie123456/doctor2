@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="#fff">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout"></LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="一个月费用"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+    <com.company.linquan.app.view.DelEditText
+        android:id="@+id/setting_private_one"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView17"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView17"
+        app:layout_constraintTop_toTopOf="@+id/myTextView17"
+        app:layout_constraintRight_toLeftOf="@+id/myTextView21"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="元"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView17"
+        app:layout_constraintLeft_toRightOf="@+id/setting_private_one"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView17"
+        android:layout_marginRight="14dp"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_16"/>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView17"></LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="三个月费用"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    <com.company.linquan.app.view.DelEditText
+        android:id="@+id/setting_private_three"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView18"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView18"
+        app:layout_constraintTop_toTopOf="@+id/myTextView18"
+        app:layout_constraintRight_toLeftOf="@+id/myTextView22"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="元"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView18"
+        app:layout_constraintLeft_toRightOf="@+id/setting_private_three"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView18"
+        android:layout_marginRight="14dp"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_16"/>
+
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView18"></LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="六个月费用"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+    <com.company.linquan.app.view.DelEditText
+        android:id="@+id/setting_private_six"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView19"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView19"
+        app:layout_constraintTop_toTopOf="@+id/myTextView19"
+        app:layout_constraintRight_toLeftOf="@+id/myTextView23"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="元"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView19"
+        app:layout_constraintLeft_toRightOf="@+id/setting_private_six"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView19"
+        android:layout_marginRight="14dp"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_16"/>
+
+
+    <LinearLayout
+        android:id="@+id/line4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView19"></LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="十二个月费用"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+    <com.company.linquan.app.view.DelEditText
+        android:id="@+id/setting_private_year"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView20"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView20"
+        app:layout_constraintTop_toTopOf="@+id/myTextView20"
+        app:layout_constraintRight_toLeftOf="@+id/myTextView24"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="元"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView20"
+        app:layout_constraintLeft_toRightOf="@+id/setting_private_year"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView20"
+        android:layout_marginRight="14dp"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_16"/>
+
+    <LinearLayout
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/setting_private_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView20"></LinearLayout>
+
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/setting_private_btn"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:background="@color/base_red_color"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>

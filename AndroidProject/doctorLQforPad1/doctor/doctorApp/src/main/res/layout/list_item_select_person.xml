@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp"
+    android:background="#fff"
+    android:layout_marginTop="1dp">
+
+    <com.company.linquan.app.view.RoundImageView
+        android:id="@+id/list_item_photo"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="名字"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_photo"
+        app:layout_constraintTop_toTopOf="@+id/list_item_photo" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="手机号"
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_photo"
+        app:layout_constraintLeft_toLeftOf="@+id/list_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_name" />
+
+    <ImageView
+        android:id="@+id/list_item_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/img_stop_face_select"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_photo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/list_item_photo" />
+</android.support.constraint.ConstraintLayout>

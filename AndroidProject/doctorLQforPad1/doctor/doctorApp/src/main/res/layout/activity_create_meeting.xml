@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/list_item_line1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/block_gray_bg"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout"></LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_line1"
+        app:layout_constraintBottom_toTopOf="@+id/createMeeting_btn"
+        android:background="#f4f4f4">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff">
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="会议标题"
+                android:textColor="#353535"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.company.linquan.app.view.DelEditText
+                android:id="@+id/createMeeting_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView1"
+                app:layout_constraintLeft_toRightOf="@+id/myTextView1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myTextView1">
+
+
+            </com.company.linquan.app.view.DelEditText>
+
+            <LinearLayout
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/line_gray_bg"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView1">
+
+
+            </LinearLayout>
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="开始时间"
+                android:textColor="#353535"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/createMeeting_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="请选择会议的开始时间"
+                android:textColor="#525252"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView2"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintLeft_toRightOf="@+id/myTextView2"
+                app:layout_constraintTop_toTopOf="@+id/myTextView2"
+                android:paddingRight="5dp"/>
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/createMeeting_date"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createMeeting_date"
+                app:srcCompat="@drawable/img_auth_more"/>
+
+
+            <LinearLayout
+                android:id="@+id/line6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/line_gray_bg"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView2">
+
+            </LinearLayout>
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="结束时间"
+                android:textColor="#353535"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line6" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/createMeeting_date_end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="请选择会议的结束时间"
+                android:textColor="#525252"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView6"
+                app:layout_constraintEnd_toStartOf="@+id/imageView6"
+                app:layout_constraintLeft_toRightOf="@+id/myTextView6"
+                app:layout_constraintTop_toTopOf="@+id/myTextView6"
+                android:paddingRight="5dp"/>
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/createMeeting_date_end"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/createMeeting_date_end"
+                app:srcCompat="@drawable/img_auth_more"/>
+
+
+            <LinearLayout
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/line_gray_bg"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView6">
+
+
+            </LinearLayout>
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="会议地址"
+                android:textColor="#353535"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/createMeeting_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="请选择会议地址"
+                android:textColor="#525252"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView3"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintLeft_toRightOf="@+id/myTextView3"
+                app:layout_constraintTop_toTopOf="@+id/myTextView3"
+                android:paddingRight="5dp"/>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView3"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myTextView3"
+                app:srcCompat="@drawable/img_auth_more"/>
+
+            <LinearLayout
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/block_gray_bg"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/myTextView3">
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/createMeeting_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#fff"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="请输入您会议的内容(至少10个字以上)"
+                android:inputType="textMultiLine"
+                android:lines="6"
+                android:textSize="@dimen/font_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+
+            <ImageView
+                android:id="@+id/createMeeting_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createMeeting_content"
+                android:background="@drawable/img_auth_add"
+                android:layout_marginLeft="20dp"/>
+
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="（请选择会议封面）"
+                android:textColor="#8e8e8e"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintBottom_toBottomOf="@+id/createMeeting_add"
+                app:layout_constraintLeft_toRightOf="@+id/createMeeting_add"
+                app:layout_constraintTop_toTopOf="@+id/createMeeting_add"/>
+
+            <LinearLayout
+                android:id="@+id/line5"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/block_gray_bg"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/createMeeting_add">
+
+            </LinearLayout>
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/myTextView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:text="邀请成员"
+                android:textColor="#353535"
+                android:textSize="@dimen/font_16"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line5" />
+
+            <com.company.linquan.app.view.MyTextView
+                android:id="@+id/createMeeting_member"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:text="请选择成员"
+                android:textColor="#525252"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView5"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintLeft_toRightOf="@+id/myTextView5"
+                app:layout_constraintTop_toTopOf="@+id/myTextView5"
+                android:paddingRight="5dp"/>
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/myTextView5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/myTextView5"
+                app:srcCompat="@drawable/img_auth_more" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/createMeeting_btn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/base_red_color"
+        android:gravity="center"
+        android:text="确定创建"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</android.support.constraint.ConstraintLayout>

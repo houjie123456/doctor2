@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/line8"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="2dp"-->
+    <!--android:background="@color/line_gray_bg"-->
+    <!--android:orientation="horizontal"-->
+    <!--app:layout_constraintLeft_toLeftOf="parent"-->
+    <!--app:layout_constraintRight_toRightOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--android:visibility="gone"></LinearLayout>-->
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/confirm_btn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/base_red_color"
+        android:gravity="center"
+        android:text="审核通过"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/fail_btn"
+        app:layout_constraintTop_toBottomOf="@+id/scroll" />
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/fail_btn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/btn_red"
+        android:gravity="center"
+        android:text="审核不通过"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/confirm_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scroll" />
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="患者详情"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid1"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/line2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="患者信息"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/visit_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="林绽"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/visit_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="男"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/visit_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="20岁"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid1"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/line3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="联系方式"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/visit_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="一周内"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid2"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid3"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/line4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="预约开始时间"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/visit_start_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="一周内"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line501"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid3"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid6"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/line501">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="预约结束时间"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/visit_end_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="一周内"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line502"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid6"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid7"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/line502">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="患者地址"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/visit_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="一周内"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line503"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid7"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid8"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/line503">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="金额"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="一周内"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line504"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid8"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid9"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/line504">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="支付状态"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/paystate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="一周内"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line505"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid9"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid10"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/line505">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="服务状态"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/servicestate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="一周内"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line506"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid10"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid11"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/line506">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="订单号"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/orderid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="一周内"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line507"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid11"></LinearLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/line5"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line507"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid4"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/line5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="病情描述"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/illnessdescr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="25dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line6"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid4"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid12"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/line6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="身份证号"
+                    android:textSize="13sp" />
+
+                <com.company.linquan.app.view.MyTextView
+                    android:id="@+id/idcardno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="一周内"
+                    android:textColor="#4d4d4d"
+                    android:textSize="13sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/line508"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid12"></LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_mid19"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/line508">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:text="身份证正面与背面"
+                    android:textSize="13sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/idCardFront"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    app:srcCompat="@drawable/img_auth_add" />
+
+                <ImageView
+                    android:id="@+id/idCardAgainst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    app:srcCompat="@drawable/img_auth_add" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/line601"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_mid19"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_mid5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/line601">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="病情照片"
+                    android:textSize="13sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_item_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"></android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/line10"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="#f1f1f1"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_mid5">
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:text="审核备注(审核不通过时必填)"
+                android:textColor="#676767"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line10" />
+
+
+            <EditText
+                android:id="@+id/checkRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10"
+                android:lines="5"
+                android:gravity="top|left"
+                android:textColor="#525252"
+                android:background="#fff"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:hint="请输入备注信息"
+                android:textSize="@dimen/font_14"/>
+
+
+
+
+
+
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
+
+
+

@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="#fff">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_line1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4"
+        android:paddingBottom="5dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="5dp"
+        android:text="药品名称"
+        android:textColor="#e8e8e8"
+        android:textSize="@dimen/font_13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/add_drugs_select_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_add_drugs_btn_style"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:text="选择"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_line1" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/point1"
+        android:layout_width="4dp"
+        android:layout_height="4dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/shape_add_drugs_point_style"
+        app:layout_constraintBottom_toBottomOf="@+id/add_drugs_select_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/add_drugs_select_btn" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/add_drugs_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="药品名"
+        app:layout_constraintBottom_toBottomOf="@+id/add_drugs_select_btn"
+        app:layout_constraintRight_toLeftOf="@+id/add_drugs_select_btn"
+        app:layout_constraintRight_toRightOf="@+id/point1"
+        app:layout_constraintStart_toEndOf="@+id/point1"
+        app:layout_constraintTop_toTopOf="@+id/add_drugs_select_btn" />
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="15dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_drugs_select_btn"></LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="药品数量"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    <com.company.linquan.app.view.DelEditText
+        android:id="@+id/add_drugs_num"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView20"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView20"
+        app:layout_constraintTop_toTopOf="@+id/myTextView20"
+        app:layout_constraintRight_toLeftOf="@+id/imageView15">
+
+    </com.company.linquan.app.view.DelEditText>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/imageView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#525252"
+        android:textSize="@dimen/font_14"
+        android:text="盒"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView20"
+        app:layout_constraintLeft_toRightOf="@+id/add_drugs_num"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView20"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="10dp"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/line9"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView20"></LinearLayout>
+
+
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="每次用量"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line9" />
+
+    <com.company.linquan.app.view.DelEditText
+        android:id="@+id/add_drugs_method"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView19"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView19"
+        app:layout_constraintTop_toTopOf="@+id/myTextView19"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30dp">
+
+    </com.company.linquan.app.view.DelEditText>
+
+
+
+    <LinearLayout
+        android:id="@+id/line5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView19"></LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView191"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="服用单位"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line5" />
+    <Spinner
+        android:id="@+id/spinner_1"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:dropDownWidth="80dp"
+        android:background="@drawable/shape_corner"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView191"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView191"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="10dp"/>
+    <LinearLayout
+        android:id="@+id/line901"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView191"></LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="服用时间"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line901" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/add_drugs_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView18"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView18"
+        app:layout_constraintTop_toTopOf="@+id/myTextView18"
+        app:layout_constraintRight_toLeftOf="@+id/imageView16"
+        android:gravity="right|center_vertical">
+
+    </com.company.linquan.app.view.MyTextView>
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/img_auth_more"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView18"
+        app:layout_constraintLeft_toRightOf="@+id/add_drugs_time"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView18"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/line6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView18"></LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="给药方式"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line6" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/add_drugs_eat"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView17"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView17"
+        app:layout_constraintTop_toTopOf="@+id/myTextView17"
+        app:layout_constraintRight_toLeftOf="@+id/imageView17"
+        android:gravity="right|center_vertical">
+
+    </com.company.linquan.app.view.MyTextView>
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/img_auth_more"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView17"
+        app:layout_constraintLeft_toRightOf="@+id/add_drugs_eat"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView17"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/line7"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView17"></LinearLayout>
+
+    <EditText
+        android:id="@+id/add_drugs_remark"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:lines="5"
+        android:gravity="top|left"
+        android:hint="请输入具体描述"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line7"
+        android:background="#fff"
+        android:textSize="@dimen/font_14"
+        android:textColor="#525252"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/line8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_drugs_remark"
+        app:layout_constraintBottom_toTopOf="@+id/add_drugs_btn"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/add_drugs_btn"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:background="@color/base_red_color"
+        android:gravity="center"
+        android:text="确认添加"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

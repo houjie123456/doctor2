@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="姓名"
+        android:textColor="#4d4d4d"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="男"
+        android:textColor="#4d4d4d"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_name"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="20岁"
+        android:textColor="#4d4d4d"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_sex"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="已完成"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_age"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/shape_corner_state"/>
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:text="预约时间段:"
+        android:textColor="#777"
+        android:textSize="@dimen/font_13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:text="08:00-09:00"
+        android:textColor="#000"
+        android:textSize="@dimen/font_13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_txt"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:text="联系患者"
+        android:textColor="@color/colorSendName6"
+        android:textSize="@dimen/font_15"
+        android:layout_marginTop="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/list_item_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:text="审核"
+        android:textColor="@color/colorBtn"
+        android:textSize="@dimen/font_15"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <!--<ImageView-->
+        <!--android:id="@+id/list_item_btn"-->
+        <!--android:layout_width="45dp"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+        <!--app:srcCompat="@drawable/voice_call" />-->
+
+    <!--<com.company.doctor.app.view.MyTextView-->
+    <!--android:id="@+id/list_item_btn"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginRight="16dp"-->
+    <!--android:background="@drawable/shape_list_item_voice_btn_style"-->
+    <!--android:paddingBottom="6dp"-->
+    <!--android:paddingLeft="10dp"-->
+    <!--android:paddingRight="10dp"-->
+    <!--android:paddingTop="6dp"-->
+    <!--android:text="回拨"-->
+    <!--android:textColor="#000"-->
+    <!--android:textSize="@dimen/font_12"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/list_item_person_image"-->
+    <!--app:layout_constraintRight_toRightOf="@id/list_item_head_layout"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/list_item_person_image"/>-->
+    <!--</LinearLayout>-->
+    <LinearLayout
+        android:id="@+id/list_item_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_txt"></LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

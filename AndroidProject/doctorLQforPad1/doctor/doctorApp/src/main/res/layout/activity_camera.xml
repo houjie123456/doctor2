@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/gray_bg">
+
+    <SurfaceView
+        android:id="@+id/cashier_preview_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.company.linquan.app.zxing.view.ViewfinderView
+        android:id="@+id/cashier_viewfinder_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <include
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_head_base" />
+
+</FrameLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/list_item_line1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout">
+
+
+    </LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="开通义诊"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_line1" />
+
+    <Switch
+        android:id="@+id/setting_free_if"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/line3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.966"
+        app:layout_constraintStart_toEndOf="@+id/myTextView15"
+        app:layout_constraintTop_toTopOf="@+id/list_item_line1"
+        app:layout_constraintVertical_bias="0.875" />
+
+    <!--<com.company.doctor.app.view.MyTextView-->
+        <!--android:id="@+id/setting_picture_time2"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/myTextView15"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/myTextView15"-->
+        <!--app:layout_constraintRight_toLeftOf="@+id/imageView17"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/myTextView15"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:textColor="#525252"-->
+        <!--android:textSize="@dimen/font_14"-->
+        <!--android:gravity="center_vertical"/>-->
+
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView17"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/img_auth_more"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/myTextView15"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/setting_picture_time"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/myTextView15"-->
+        <!--android:layout_marginRight="16dp"-->
+        <!--android:layout_marginEnd="16dp"/>-->
+
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView15"></LinearLayout>
+
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="免费人数"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+    <com.company.linquan.app.view.DelEditText
+        android:id="@+id/setting_free_people"
+        android:layout_width="288dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/line2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/setting_free_time"
+        app:layout_constraintTop_toTopOf="@+id/line3" />
+    <!--<com.company.doctor.app.view.MyTextView-->
+        <!--android:id="@+id/setting_picture_num"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/myTextView18"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/myTextView18"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/myTextView18"-->
+        <!--app:layout_constraintRight_toLeftOf="@+id/imageView14"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:paddingRight="10dp"-->
+        <!--android:textColor="#525252"-->
+        <!--android:textSize="@dimen/font_14"-->
+        <!--android:gravity="center_vertical">-->
+
+    <!--</com.company.doctor.app.view.MyTextView>-->
+
+    <!--<ImageView-->
+        <!--android:id="@+id/imageView14"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/img_auth_more"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/myTextView18"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/setting_picture_num"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/myTextView18"-->
+        <!--android:layout_marginRight="16dp"/>-->
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView18"></LinearLayout>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/myTextView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="15dp"
+        android:text="免费次数"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    <com.company.linquan.app.view.DelEditText
+        android:id="@+id/setting_free_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="76dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView17"
+        app:layout_constraintTop_toBottomOf="@+id/setting_free_people" />
+
+    <!--<com.company.doctor.app.view.MyTextView-->
+        <!--android:id="@+id/myTextView21"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!---->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/myTextView17"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/setting_picture_money"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/myTextView17"-->
+        <!--android:layout_marginRight="14dp"-->
+        <!--android:textColor="#353535"-->
+        <!--android:textSize="@dimen/font_16"/>-->
+
+
+    <LinearLayout
+        android:id="@+id/line6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/setting_free_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView17"></LinearLayout>
+
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/setting_free_btn"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_marginBottom="324dp"
+        android:background="@color/base_red_color"
+        android:gravity="center"
+        android:text="确认设置"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

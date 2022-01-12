@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:background="#fff"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/dialog_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:textColor="#282828"
+        android:textSize="@dimen/font_16"
+        android:text="修改昵称："
+        android:paddingLeft="16dp"/>
+
+    <com.company.linquan.app.view.DelEditText
+        android:id="@+id/dialog_item_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/dialog_item_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_base_btn_style"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_16"
+        android:text="确定"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"/>
+
+</LinearLayout>

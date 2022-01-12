@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="#fff">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/doc_detail_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="#353535"
+        android:textSize="@dimen/font_18"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"/>
+
+    <com.company.linquan.app.view.RoundImageView
+        android:id="@+id/doc_detail_photo"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doc_detail_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"/>
+
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/doc_detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/doc_detail_photo"
+        app:layout_constraintBottom_toBottomOf="@id/doc_detail_photo"
+        app:layout_constraintLeft_toRightOf="@id/doc_detail_photo"
+        android:text=""
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_14"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"/>
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/doc_detail_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/doc_detail_photo"
+        app:layout_constraintBottom_toBottomOf="@id/doc_detail_photo"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text=""
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_14"
+        android:paddingLeft="16dp"
+        android:paddingRight="20dp"/>
+
+
+    <com.company.linquan.app.view.MyTextView
+        android:id="@+id/doc_detail_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/doc_detail_photo"
+        android:text=""
+        android:textColor="#525252"
+        android:textSize="@dimen/font_15"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="30dp"/>
+
+
+</android.support.constraint.ConstraintLayout>
