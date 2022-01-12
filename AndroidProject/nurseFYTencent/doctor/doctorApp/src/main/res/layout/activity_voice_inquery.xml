@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+    <include
+        android:id="@+id/head_layout_top"
+        layout="@layout/layout_head_base"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<ScrollView
+    android:id="@+id/scroll"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/head_layout_top">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="48dp">
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#f4f4f4"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/line1">
+
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.RoundImageView
+                android:id="@+id/visit_head"
+                android:layout_width="47dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/img_person"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_head"
+                app:layout_constraintLeft_toLeftOf="@+id/layout_head"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/visit_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="26dp"
+                android:text="姓名"
+                android:textColor="#4d4d4d"
+                android:textSize="@dimen/font_15"
+                app:layout_constraintBottom_toBottomOf="@+id/visit_head"
+                app:layout_constraintLeft_toRightOf="@+id/visit_head"
+                app:layout_constraintTop_toTopOf="@+id/visit_head" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/visit_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="26dp"
+                android:text="性别"
+                android:textColor="#4d4d4d"
+                android:textSize="@dimen/font_15"
+                app:layout_constraintBottom_toBottomOf="@+id/visit_head"
+                app:layout_constraintLeft_toRightOf="@+id/visit_name"
+                app:layout_constraintTop_toTopOf="@+id/visit_head" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/visit_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="26dp"
+                android:text="0岁"
+                android:textColor="#4d4d4d"
+                android:textSize="@dimen/font_15"
+                app:layout_constraintBottom_toBottomOf="@+id/visit_head"
+                app:layout_constraintLeft_toRightOf="@+id/visit_sex"
+                app:layout_constraintTop_toTopOf="@+id/visit_head" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/list_item_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="24dp"
+                android:text="备注:"
+                android:textColor="#777"
+                android:textSize="@dimen/font_13"
+                app:layout_constraintBottom_toBottomOf="@+id/visit_head"
+                app:layout_constraintLeft_toRightOf="@+id/visit_head"
+                app:layout_constraintTop_toTopOf="@+id/visit_head" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/first_ask_remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="24dp"
+                android:text="无"
+                android:textColor="#777"
+                android:textSize="@dimen/font_13"
+                app:layout_constraintBottom_toBottomOf="@+id/visit_head"
+                app:layout_constraintLeft_toRightOf="@+id/list_item_txt"
+                app:layout_constraintTop_toTopOf="@+id/visit_head" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:text="电子病历"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_head"
+                app:layout_constraintRight_toRightOf="@+id/layout_head"
+                app:layout_constraintTop_toTopOf="@+id/layout_head" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/layout_head"
+                app:layout_constraintRight_toRightOf="@+id/layout_head"
+                app:layout_constraintTop_toTopOf="@+id/layout_head"
+                app:srcCompat="@drawable/img_auth_more" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#f4f4f4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_head">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="患者信息"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_mid01"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/line2">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="监护人姓名"
+                android:textSize="13sp" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/look_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无"
+                android:textColor="#4d4d4d"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_mid1"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/layout_mid01">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="监护人身份证号"
+                android:textSize="13sp" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/look_id_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无"
+                android:textColor="#4d4d4d"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_mid2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/layout_mid1">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="患病时长"
+                android:textSize="13sp" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/visit_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无"
+                android:textColor="#4d4d4d"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f4f4f4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_mid2">
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_health"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/line4">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="健康档案"
+                android:textSize="13sp"/>
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/visit_health"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="点击查看档案详情"
+                android:textColor="#4d4d4d"
+                android:textSize="13sp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/img_auth_more"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line401"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f4f4f4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_health"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_visit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/line401">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="院内就诊"
+                android:textSize="13sp"/>
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/visit_record"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="点击查看院内就诊记录"
+                android:textColor="#4d4d4d"
+                android:textSize="13sp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/imageView91"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/img_auth_more" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line4011"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f4f4f4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_visit">
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_report"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/line4011">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="检查检验"
+                android:textSize="13sp"/>
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/report_search"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="点击查看报告单查询"
+                android:textColor="#4d4d4d"
+                android:textSize="13sp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/imageView92"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/img_auth_more" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line4012"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f4f4f4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_report">
+        </LinearLayout>
+
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/layout_mid_purpose"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/line4012">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="咨询目的"
+                android:textSize="13sp" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/visit_purpose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无"
+                android:textColor="#4d4d4d"
+                android:textSize="13sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/line402"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f4f4f4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_mid_purpose"></LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_mid_return"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/line402">
+
+            <TextView
+                android:layout_width="125dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:text="复诊凭证"
+                android:textSize="13sp" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/visit_return_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无"
+                android:textColor="#4d4d4d"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/line5"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#f4f4f4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_mid_return"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_mid_disease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/line5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:text="院内诊断"
+                android:textSize="13sp" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/visit_disease"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="10dp"
+                android:lineSpacingExtra="5dp"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:maxLines="10"
+                android:text="未生育未婚未生育未婚未生育未婚未生育未婚未生育未婚未生育未婚未生育未婚未生育未婚未生育未婚未生育未婚未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育未婚、未生育"
+                android:textColor="#4d4d4d"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line601"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#f4f4f4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_mid_disease"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_mid4"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/line601">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:text="病情描述"
+                android:textSize="13sp" />
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/visit_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:lineSpacingExtra="5dp"
+                android:scrollbars="vertical"
+                android:singleLine="false"
+                android:maxLines="10"
+                android:text="暂无"
+                android:textColor="#4d4d4d"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/line6"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#f4f4f4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_mid4"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_mid5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/line6">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="10dp"
+                android:text="病情照片"
+                android:textSize="13sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_item_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"></androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:text="审核备注(审核不通过时必填)"
+            android:textColor="#676767"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_mid5" />
+        <EditText
+            android:id="@+id/checkRemark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            android:lines="5"
+            android:gravity="top|left"
+            android:textColor="#525252"
+            android:background="#fff"
+            android:paddingRight="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:hint="请输入备注信息"
+            android:textSize="@dimen/font_14"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/confirm_btn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/base_red_color"
+        android:gravity="center"
+        android:text="审核通过"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/fail_btn"/>
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/fail_btn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/btn_red"
+        android:gravity="center"
+        android:text="审核不通过"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/confirm_btn"
+        app:layout_constraintRight_toRightOf="parent" />
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/diagnose_btn"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:background="@color/base_red_color"
+        android:gravity="center"
+        android:text="立即诊断"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_18"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:visibility="gone"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

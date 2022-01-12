@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="47dp"
+    android:background="#fff"
+    android:paddingRight="10dp"
+    android:paddingLeft="10dp">
+
+    <ImageView
+        android:id="@+id/head_top_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_top_back_black"
+        android:layout_alignParentLeft="true"
+        />
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/head_top_select_all"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全选"
+        android:textColor="#006DFA"
+        android:textSize="14sp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/head_top_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#282828"
+        android:textSize="@dimen/font_18"
+        android:gravity="center"
+        android:text="标题"
+        android:layout_centerInParent="true"/>
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/head_top_right_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:text="编辑"
+        android:textColor="#ff444444"
+        android:textSize="14sp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/head_top_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="#006DFA"
+        android:textSize="14sp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

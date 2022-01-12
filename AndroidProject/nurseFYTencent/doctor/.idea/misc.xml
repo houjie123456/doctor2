@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/drawable-xxxhdpi/nim_message_item_left_selector.xml" value="0.33611111111111114" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/drawable-xxxhdpi/nim_message_item_round_bg.xml" value="0.22083333333333333" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/drawable/chat_bubble_other_bg.xml" value="0.33611111111111114" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/drawable/chat_bubble_self_bg.xml" value="0.33611111111111114" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/layout/activity_camera.xml" value="0.18072916666666666" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/layout/activity_first_inquery_share.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/layout/activity_health_record.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/layout/chat_activity.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/layout/chat_fragment.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/layout/layout_head_base.xml" value="0.2046875" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/layout/list_item_first_inquery.xml" value="0.2046875" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/layout/message_adapter_item_content.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIChat/tuichat/src/main/res/layout/test_custom_message_layout1.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIConversation/tuiconversation/src/main/res/layout/conversation_fragment.xml" value="0.18" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIConversation/tuiconversation/src/main/res/layout/conversation_layout.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIConversation/tuiconversation/src/main/res/layout/conversation_pop_menu_layout.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUIConversation/tuiconversation/src/main/res/layout/layout_head_base.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/TUIKit/TUICore/tuicore/src/main/res/layout/title_bar_layout.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/drawable-hdpi/nim_blue_edit_text_bg.xml" value="0.22083333333333333" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/drawable/nim_play_btn_select.xml" value="0.22083333333333333" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/layout/about_layout.xml" value="0.2046875" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/layout/activity_camera.xml" value="0.18072916666666666" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/layout/activity_home.xml" value="0.36614583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/layout/activity_privatization_config.xml" value="0.33" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/layout/dialog_show_confirm.xml" value="0.2046875" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/layout/dialog_show_without_pwd.xml" value="0.2046875" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/layout/file_download_activity.xml" value="0.2046875" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/layout/fragment_home_work_nurse.xml" value="0.18072916666666666" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/layout/item_conversation.xml" value="0.17864583333333334" />
+        <entry key="..\:/AndroidProject/nurseFYTencent/doctor/doctorApp/src/main/res/layout/session_list.xml" value="0.2046875" />
+      </map>
+    </option>
+  </component>
+  <component name="NullableNotNullManager">
+    <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
+    <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />
+    <option name="myNullables">
+      <value>
+        <list size="14">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.Nullable" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nullable" />
+          <item index="2" class="java.lang.String" itemvalue="javax.annotation.CheckForNull" />
+          <item index="3" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.Nullable" />
+          <item index="4" class="java.lang.String" itemvalue="android.support.annotation.Nullable" />
+          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.Nullable" />
+          <item index="6" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNullable" />
+          <item index="7" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.Nullable" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableDecl" />
+          <item index="9" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NullableType" />
+          <item index="10" class="java.lang.String" itemvalue="com.android.annotations.Nullable" />
+          <item index="11" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.Nullable" />
+          <item index="12" class="java.lang.String" itemvalue="io.reactivex.annotations.Nullable" />
+          <item index="13" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.Nullable" />
+        </list>
+      </value>
+    </option>
+    <option name="myNotNulls">
+      <value>
+        <list size="14">
+          <item index="0" class="java.lang.String" itemvalue="org.jetbrains.annotations.NotNull" />
+          <item index="1" class="java.lang.String" itemvalue="javax.annotation.Nonnull" />
+          <item index="2" class="java.lang.String" itemvalue="edu.umd.cs.findbugs.annotations.NonNull" />
+          <item index="3" class="java.lang.String" itemvalue="android.support.annotation.NonNull" />
+          <item index="4" class="java.lang.String" itemvalue="androidx.annotation.NonNull" />
+          <item index="5" class="java.lang.String" itemvalue="androidx.annotation.RecentlyNonNull" />
+          <item index="6" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.qual.NonNull" />
+          <item index="7" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullDecl" />
+          <item index="8" class="java.lang.String" itemvalue="org.checkerframework.checker.nullness.compatqual.NonNullType" />
+          <item index="9" class="java.lang.String" itemvalue="com.android.annotations.NonNull" />
+          <item index="10" class="java.lang.String" itemvalue="org.eclipse.jdt.annotation.NonNull" />
+          <item index="11" class="java.lang.String" itemvalue="io.reactivex.annotations.NonNull" />
+          <item index="12" class="java.lang.String" itemvalue="io.reactivex.rxjava3.annotations.NonNull" />
+          <item index="13" class="java.lang.String" itemvalue="lombok.NonNull" />
+        </list>
+      </value>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

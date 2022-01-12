@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp"
+    android:layout_marginTop="1dp"
+    android:background="#fff">
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="选择项"
+        android:textColor="#353535"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/list_item_level"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_update"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="200dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="修改"
+        android:textColor="#1f67f5"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/list_item_delete"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="删除"
+        android:textColor="#FF4081"
+        android:textSize="14dp"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_update"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="内容"
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_data"
+        android:visibility="gone"/>
+
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:text="内容"
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_13"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/list_item_data"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_data"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_data"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

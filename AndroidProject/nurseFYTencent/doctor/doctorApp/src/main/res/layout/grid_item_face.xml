@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="59dp">
+
+    <LinearLayout
+        android:id="@+id/grid_item_txt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/grid_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#353535"
+            android:textSize="@dimen/font_13"/>
+
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/grid_item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#353535"
+            android:textSize="@dimen/font_13"
+            android:layout_marginTop="5dp"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/grid_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:id="@+id/grid_item_right_top_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layer_face_grid_right_top_style"
+        android:layout_gravity="top|right"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textSize="@dimen/font_10"
+            android:text="预"/>
+
+    </LinearLayout>
+
+</FrameLayout>

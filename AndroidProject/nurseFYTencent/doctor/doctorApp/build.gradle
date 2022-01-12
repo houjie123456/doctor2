@@ -1,0 +1,270 @@
+apply plugin: 'com.android.application'
+//网易云
+
+//网易云End
+android {
+    useLibrary 'org.apache.http.legacy'
+    signingConfigs {
+        doctor {
+            keyAlias 'wanbei'
+            keyPassword 'wanbei'
+            storeFile file('D:/AndroidProject/nurseFYTencent/doctor.jks')
+            storePassword 'wanbei'
+        }
+    }
+
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.company.wanbei.app"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+//        versionCode 10
+//        versionName "1.4.3"
+//        versionCode 4
+//        versionName "1.3"
+        //网易云Start
+//        buildConfigField "String", "GIT_REVISION", "\"${getGitVersion()}\""
+        buildConfigField "String", "BUILD_DATE", "\"${new Date().toLocaleString()}\""
+        //网易云End
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk{
+//            abiFilters "armeabi","armeabi-v7a", "x86", "x86_64","arm64-v8a"//,"arm64-v8a", "x86","arm64-v8a","x86_64"
+//            abiFilters "armeabi","arm64-v8a"//,"arm64-v8a", "x86","arm64-v8a","x86_64"
+            abiFilters "armeabi","arm64-v8a", "armeabi-v7a", "x86", "x86_64"
+        }
+        //极光推送
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "29d68eb6636eee275ece4f92", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+    }
+
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.doctor
+            //安卓包压缩Start
+            buildConfigField "boolean", "LOG_DEBUG", "false" //不显示log
+            shrinkResources true  //移除无用资源
+            zipAlignEnabled true //Zipalign优化
+            //安卓包压缩End
+
+        }
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.doctor
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs'] //这一句是设置目标的so存放路径，也就是组装到apk中的so路径
+            jni.srcDirs = []  //这一句是禁用gradle默认的ndk-build，防止AS自己生成android.mk编译jni工程
+            //网易云Start
+            //网易云End
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    //网易云Start
+    //网易云End
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '28.0.0'
+                }
+            }
+        }
+    }
+    packagingOptions {
+        //加上这些代码
+//        pickFirst 'lib/x86/libnrtc_mp4v2.so'
+//        pickFirst 'lib/x86/libnrtc_sdk.so'
+//        pickFirst 'lib/armeabi-v7a/libnrtc_mp4v2.so'
+//        pickFirst 'lib/x86_64/libnrtc_mp4v2.so'
+//        pickFirst 'lib/arm64-v8a/libnrtc_sdk.so'
+//        pickFirst 'lib/armeabi-v7a/libnrtc_sdk.so'
+//        pickFirst 'lib/arm64-v8a/libnrtc_mp4v2.so'
+//        pickFirst 'lib/x86_64/libnrtc_sdk.so'
+//
+//        pickFirst 'lib/arm64-v8a/libne_audio.so'
+//        pickFirst 'lib/x86_64/libne_audio.so'
+//        pickFirst 'lib/x86/libne_audio.so'
+//        pickFirst 'lib/armeabi-v7a/libne_audio.so'
+//
+//        pickFirst 'lib/x86_64/libyxbase.so'
+//        pickFirst 'lib/x86/libyxbase.so'
+//        pickFirst 'lib/arm64-v8a/libyxbase.so'
+//        pickFirst 'lib/armeabi-v7a/libyxbase.so'
+
+        pickFirst 'assets/nim_keystore'
+        pickFirst 'assets/nim_keystore2'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+//    implementation project(path: ':uikit')
+//    implementation project(path: ':avchatkit')
+//    implementation project(path: ':faceunity')
+
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+//    implementation ("com.android.support:appcompat-v7:28.0.0"){force true}
+    implementation 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
+//    implementation ('com.android.support.constraint:constraint-layout:1.0.0-alpha9'){force true}
+    testImplementation 'junit:junit:4.12'
+//    testImplementation ('junit:junit:4.12'){force true}
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+//    implementation ('com.android.support:recyclerview-v7:28.0.0'){force true}
+    implementation 'com.google.code.gson:gson:2.2.4'
+//    implementation ('com.google.code.gson:gson:2.2.4'){force true}
+    implementation 'com.squareup.okhttp3:okhttp:3.8.1'
+//    implementation ('com.squareup.okhttp3:okhttp:3.8.1'){force true}
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+//    implementation ('com.squareup.retrofit2:retrofit:2.3.0'){force true}
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+//    implementation ('com.squareup.retrofit2:converter-gson:2.1.0'){force true}
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+    //编译RxJava
+    implementation 'io.reactivex:rxjava:1.1.6'
+    //编译RxAndroid
+    implementation 'io.reactivex:rxandroid:1.2.1'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+//    implementation(name: 'LiteAVSDK_Professional_4.9.4663', ext: 'aar')
+//    implementation files('libs/glide-3.6.1.jar')
+    implementation 'com.lovedise:permissiongen:0.0.6'
+//    implementation files('libs/core_3.2.0.jar')
+    implementation 'com.readystatesoftware.systembartint:systembartint:1.0.3'
+    implementation 'cn.aigestudio.datepicker:DatePicker:2.2.0'
+    implementation 'com.github.flavienlaurent.datetimepicker:library:0.0.2'
+    implementation 'com.amap.api:location:4.1.0'
+    implementation 'com.amap.api:map2d:5.2.0'
+    implementation 'com.amap.api:search:6.1.0'
+    implementation files('libs/MobCommons-2018.0704.1311.jar')
+    implementation files('libs/MobTools-2018.0704.1157.jar')
+    implementation files('libs/ShareSDK-Core-3.2.1.jar')
+    implementation files('libs/ShareSDK-QQ-3.2.1.jar')
+    implementation files('libs/ShareSDK-QZone-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-Core-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-Favorite-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-Moments-3.2.1.jar')
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    implementation files('libs/alipaySdk-20180601.jar')
+    implementation 'org.slf4j:slf4j-api:1.7.21'
+    //PhotoView
+//    implementation 'com.github.chrisbanes.photoview:library:+'
+    implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    //picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation files('libs/MiPush_SDK_Client_3_6_2.jar')
+
+    implementation 'com.google.firebase:firebase-messaging:11.6.0'
+    implementation 'com.google.android.gms:play-services-base:11.6.0'
+
+    implementation 'com.meizu.flyme.internet:push-internal:3.6.3@aar'
+    implementation 'com.huawei.hms:push:4.0.4.301'
+
+    implementation 'com.netease.nimlib:jsbridge:1.3.1'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.8.0@aar') {
+        transitive = true
+    }
+
+    // ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+    // Java8 support for Lifecycles
+    implementation "android.arch.lifecycle:common-java8:1.1.0"
+
+    implementation 'com.github.HanHuoBin:BaseDialog:1.2.0'
+
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+
+    implementation 'com.github.codbking:PickTime:v1.0.1'
+    //百分比布局依赖
+    implementation 'com.android.support:percent:28.0.0'
+    implementation 'info.hoang8f:android-segmented:1.0.6'
+
+    //极光推送0
+    implementation 'cn.jiguang.sdk:jpush:3.5.6'  // 此处以JPush 3.5.6 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.2.8'  // 此处以JCore 2.2.8 版本为例。
+
+    implementation 'com.alibaba:arouter-api:1.0.2'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.0.2'
+
+    implementation 'com.youth.banner:banner:1.4.9'  //最新版本
+
+    implementation(name: 'doctor-sdk-3.4.4', ext: 'aar')
+    implementation 'com.google.code.gson:gson:2.3.1'
+
+    implementation 'com.journeyapps:zxing-android-embedded:3.6.0'
+    implementation 'com.google.zxing:core:3.3.0'
+
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+
+    implementation 'com.huawei.agconnect:agconnect-core:1.3.1.300'
+
+    implementation (name: 'com.heytap.msp', ext: 'aar')
+    // 标准版
+    compile 'com.alibaba:fastjson:1.2.55'
+
+    api project(':tuiconversation')
+    api project(':tuicontact')
+    api project(':tuichat')
+    api project(':tuisearch')
+    api project(':tuigroup')
+    api project(':tuicalling')
+
+
+    // 查看大图
+    implementation 'com.github.SherlockGougou:BigImageViewPager:v4_6.1.1'
+
+    implementation 'com.github.devlight.shadowlayout:library:1.0.2'
+
+    implementation (name: 'docSdk', ext: 'aar')
+
+    implementation files('libs/hellocharts-library-1.5.8.jar')
+}
+// Add the information to the bottom of the file.
+apply plugin: 'com.huawei.agconnect'
+

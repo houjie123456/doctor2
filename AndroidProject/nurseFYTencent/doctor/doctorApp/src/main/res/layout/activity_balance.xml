@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="#fff">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout"
+        android:background="@drawable/img_balance_top"/>
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/imageView1"
+        app:layout_constraintTop_toTopOf="@id/imageView1"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="30dp"
+        android:text="我的余额（元）"
+        android:textSize="@dimen/font_15"
+        android:textColor="#fff"/>
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/balance_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/textView1"
+        app:layout_constraintTop_toBottomOf="@id/textView1"
+        android:layout_marginTop="25dp"
+        android:textSize="@dimen/font_36"
+        android:textColor="#fff"
+        android:text="100"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

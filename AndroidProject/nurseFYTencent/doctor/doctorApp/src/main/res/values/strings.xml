@@ -1,0 +1,384 @@
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <!--<string name="app_name">新安医生</string>-->
+    <string name="app_name">安徽皖北煤电集团总医院-护士端</string>
+    <string name="agreement_doctor_txt">私人医生协议</string>
+    <string name="agreement_team_txt">名医团协议</string>
+    <string name="about_txt">阜阳市人民医院，始建于1949年，在各级领导和相关部门的关心和支持下，在全院干部职工的共同努力下，医院秉承“诚信、厚德、仁爱、精业”的院训精神，坚持“科技兴院、技术强院、人才立院”和“一切为了人民健康”的办院宗旨，历经近70年的沧桑磨砺，经过几代人的砥砺奋进，现已发展成为一所集“现代、智能、园林、人文”为一体的三级甲等综合性医院、国家级爱婴医院、安徽医科大学阜阳临床学院、蚌埠医学院附属阜阳医院、国家住培基地和全科医生培训基地、国家执业医师临床类别实践技能考试基地、国家脑卒中筛查基地，全国改善医疗服务示范医院，阜阳产前诊断、生殖、危重孕产妇及新生儿救治、胸痛、创伤中心，阜阳市32个市级质控中心挂靠地。同时也是阜阳市医疗、教学、科研、急救、预防、保健和康复的中心，肩负着为阜阳及皖西北、豫东南周边地区3000万人民群众的生命健康保驾护航的使命。
+目前，医院共有南区（综合）、北区（妇儿）、阜纺、临泉分院，总占地面积258亩，开放床位2447张。职工2789人，高级职称320人，硕、博研究生398人，享受国务院特殊津贴3人，白求恩奖章获得者1人，江淮名医5人。颍淮名中医3人、颍淮名医10人、安徽省“特支计划”1人、阜阳市杰出人才奖1人、阜阳市“领创工程”创新人才1人、阜阳市专业技术拔尖人才29人、阜阳市“健康阜阳”高层次专业技术后备人才22人。设临床医技科室56个,省“十三五”临床医学重点专科2个（骨科、妇产科），省级重点特色专科3个，市临床医学重点专科18个，重点培育专科7个，优先建设重点专科6个，建成有阜阳市“无创DNA检测实验室”、“临床代谢组学联合实验室”、“陈孝平院士工作站”。
+医院医疗设备齐全先进，配置合理。大型医疗设备400多台（套），包括PET-CT、飞利浦3.0T磁共振、飞利浦256排“显微CT”、脊柱内窥镜、G型臂、等离子双极电切镜、Stryker、奥林巴斯超高清腹腔镜系统、西门子乳腺超声等数十台高端彩超、两套一体化手术室等国内先进的现代化医疗设备。
+医院坚持科教兴院战略，学术成果突出。先后荣获省、市科技进步奖78余项，中华医学奖1项，近年来发表SCI论文18篇，出版专著5部。
+医院始终坚持公立医院公益性的定位，社会效益显著。先后高质量完成了非典、手足口病疫情防治等突发公共卫生事件，认真履行对口支援、卫生下乡、援藏援外等各项医疗工作任务。医院先后荣获国家第一批节约型公共机构节能示范单位、全国厂务公开民主管理先进单位、全国改善医疗服务先进典型、安徽省先进集体、安徽省卫生先进单位等40余项国家和省级荣誉称号。
+经历70个春秋，历代市医院人的辛勤汗水和智慧结晶，镌刻了医院悠久厚重的文化积淀和精神风骨。面对医药卫生体制改革的深化以及人民群众日益增长的医疗服务需求，全院上下同心同德、凝心聚智，精心专注于建设“皖北领先、全省一流、全国知名的现代化医院”，为保障人民群众身体健康、促进经济社会科学发展，共同绘制出一幅顺应医改新局面、实现跨越新发展的新时代领航图。</string>
+    <string name="about_company">合肥力瑞医疗科技有限公司 版权所有 2018 HeFei LiRui Medical Technology Co., Ltd.</string>
+
+    <string name="serve_txt"><b>服务协议</b></string>
+    <string name="secret_txt"><b>隐私政策</b></string>
+    <!--IM -->
+    <string name="chat_up_finger">手指上滑，取消发送</string>
+    <string name="confirm">确定</string>
+
+    <string name="cancel">取消</string>
+    <string name="chat_press_talk">按住 说话</string>
+    <string name="chat_release_send">松开 结束</string>
+    <string name="chat_image">图片</string>
+    <string name="chat_file">文件</string>
+    <string name="chat_photo">拍摄</string>
+    <string name="chat_video">小视频</string>
+    <string name="chat_audio_too_short">录音过短，请重试</string>
+    <string name="chat_video_too_short">录制过短，请重试</string>
+    <string name="chat_resend">重新发送</string>
+    <string name="chat_del">删除</string>
+    <string name="chat_save">保存</string>
+    <string name="chat_file_too_large">文件过大，发送失败</string>
+    <string name="chat_file_not_exist">文件不存在，发送失败</string>
+    <string name="chat_image_preview_title">图片预览</string>
+    <string name="chat_image_preview_send">发送</string>
+    <string name="chat_image_preview_load_err">图片加载失败</string>
+    <string name="chat_image_preview_ori">原图发送</string>
+    <string name="chat_audio_too_long">录音过长，请重试</string>
+    <string name="chat_pullback">撤回</string>
+    <string name="chat_pullback_not_support">改会话不支持消息撤回</string>
+    <string name="chat_typing">对方正在输入…</string>
+    <string name="chat_content_bad">内容含有敏感词</string>
+    <!-- time -->
+    <string name="time_yesterday">昨天</string>
+    <string name="time_day">日</string>
+    <string name="time_month">月</string>
+    <string name="time_year">年</string>
+    <string name="time_more">99+</string>
+    <string name="title_activity_group_chat_setting">GroupChatSettingActivity</string>
+
+    <!-- message -->
+    <string name="summary_image">[图片]</string>
+    <string name="summary_voice">[语音]</string>
+    <string name="summary_video">[小视频]</string>
+    <string name="summary_file">[文件]</string>
+    <string name="summary_friend_add">请求添加好友</string>
+    <string name="summary_friend_added">我已添加</string>
+    <string name="summary_friend_add_me">请求添加</string>
+    <string name="summary_friend_recommend">推荐添加</string>
+    <string name="summary_me">我</string>
+    <string name="summary_group_apply">申请加群</string>
+    <string name="summary_group_invite">邀请</string>
+    <string name="summary_group_add">加入群</string>
+    <string name="summary_agree">同意</string>
+    <string name="summary_disagree">拒绝</string>
+    <string name="summary_invite_person">邀请人</string>
+    <string name="summary_handle_person">处理人</string>
+    <string name="summary_group_admin_change">管理员变更</string>
+    <string name="summary_group_info_change">群资料变更</string>
+    <string name="summary_group_mem_change">群成员变更</string>
+    <string name="summary_group_mem_add">加入群</string>
+    <string name="summary_group_mem_quit">退出群</string>
+    <string name="summary_group_mem_kick">被踢出群</string>
+    <string name="summary_group_mem_modify">资料变更</string>
+
+    <!-- group member profile activity -->
+    <string name="group_member_profile">成员资料</string>
+    <string name="group_member_quiet">设置禁言</string>
+    <string name="group_member_manage">设为管理员</string>
+    <string name="group_member_card">群名片</string>
+    <string name="group_member_del">移出本群</string>
+    <string name="group_member_del_err">移出群成员失败</string>
+    <string name="group_member_del_succ">移出群成员成功</string>
+    <string name="group_member_manage_set_err">设置管理员失败</string>
+    <string name="group_member_manage_set_type_err">该类型群组不能设置管理员</string>
+    <string name="group_member_manage_set_succ">设置管理员成功</string>
+    <string name="group_member_quiet_ing">禁言中</string>
+    <string name="group_member_quiet_ten_min">十分钟</string>
+    <string name="group_member_quiet_one_hour">一小时</string>
+    <string name="group_member_quiet_one_day">一天</string>
+    <string name="group_member_quiet_cancel">取消禁言</string>
+    <string name="group_member_quiet_err">设置禁言失败</string>
+    <string name="group_member_change_card">修改群名片</string>
+    <string name="group_member_already">已经是群成员</string>
+    <string name="agree">同意</string>
+    <string name="agreed">已同意</string>
+    <string name="refuse">拒绝</string>
+    <string name="refused">已拒绝</string>
+    <string name="done">完成</string>
+    <!-- conversation fragment -->
+    <string name="conversation_system">系统消息</string>
+    <string name="conversation_system_friend">新朋友</string>
+    <string name="conversation_system_group">群组消息</string>
+    <string name="conversation_del">删除会话</string>
+    <string name="conversation_draft">[草稿]</string>
+    <string name="file_not_found">未找到文件，请稍后重试</string>
+    <string name="save_fail">保存失败</string>
+    <string name="save_exist">文件已存在</string>
+    <string name="save_succ">保存成功</string>
+    <string name="download_fail">下载失败</string>
+    <string name="downloading">正在下载，请稍候</string>
+    <string name="public_group">公开群</string>
+    <string name="discuss_group">讨论组</string>
+    <string name="chatroom">聊天室</string>
+    <string name="default_group_name">默认分组</string>
+    <string name="login_error">登录失败，请稍后重试</string>
+    <string name="login_error_timeout">登录失败，当前无网络</string>
+    <string name="login_succ">登录成功</string>
+    <string name="kick_logout">你的账号已在其他终端登录,重新登录</string>
+
+    <!--tencentvideo-->
+    <string name="str_enter_tips">腾讯视频通话</string>
+    <string name="str_room_title">房间名</string>
+    <string name="str_room_id">房间ID</string>
+    <string name="str_create_btn">创建房间</string>
+    <string name="str_switch_camera">翻转</string>
+    <string name="str_chat_tab">聊天</string>
+    <string name="str_wb_tab">白板</string>
+    <string name="msg_title">消息</string>
+    <string name="str_input_tips">输入文字内容</string>
+    <string name="str_beauty">美颜</string>
+    <string name="str_log">日志</string>
+    <string name="str_voice">声音</string>
+    <string name="str_room_id_tips">输入房间号</string>
+    <string name="str_enter_room_btn">进入房间</string>
+    <string name="str_role">配置</string>
+    <string name="str_feedback">反馈</string>
+    <string name="str_set_role">请选择要配置的分辨率</string>
+    <string name="str_chat">聊天</string>
+    <string name="str_set_problem">请选择反馈类型</string>
+    <string name="str_problem_other">请输入具体问题描述</string>
+    <string name="str_feedback_ret">非常感谢您的反馈</string>
+    <string name="str_login_success">登录成功</string>
+
+    <!--声网-->
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="zero">0</string>
+    <string name="num_left">*</string>
+    <string name="num_right">#</string>
+    <string name="agora_app_id">c10777176bc7426c9202420bf6a96946</string>
+
+<!--网易云-->
+    <string name="empty"></string>
+    <string name="main_tab_session">会话</string>
+    <string name="main_tab_contact">通讯录</string>
+    <string name="user_profile">个人名片</string>
+    <string name="login">登录</string>
+    <string name="logining">登录中\u2026</string>
+    <string name="register">注册</string>
+    <string name="registering">注册中\u2026</string>
+    <string name="reject">拒绝</string>
+    <string name="network_is_not_available">网络连接失败，请检查你的网络设置</string>
+    <string name="login_hint_account">请输入帐号</string>
+    <string name="login_hint_password">请输入密码</string>
+    <string name="input_account">请输入帐号，限20位字母或者数字</string>
+    <string name="register_account_tip">帐号限20位字母或者数字</string>
+    <string name="input_nickname">请输入昵称，限10位汉字、字母或者数字</string>
+    <string name="register_nick_name_tip">昵称限10位汉字、字母或者数字</string>
+    <string name="input_password">请输入密码，6~20位字母或者数字</string>
+    <string name="register_password_tip">密码必须为6~20位字母或者数字</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_failed">注册失败,错误码%1$s:%2$s</string>
+    <string name="login_has_account">已有帐号？直接登录</string>
+    <string name="prepare_data">正在准备数据...</string>
+
+    <string name="readed">已读</string>
+    <string name="unread">未读</string>
+    <string name="about">关于</string>
+    <string name="privatization_config">私有化配置</string>
+    <string name="logout">注销</string>
+    <string name="add">添加</string>
+    <string name="remove">移除</string>
+    <string name="menu">菜单</string>
+    <string name="verify_reminder">验证提醒</string>
+    <string name="without_content">暂无</string>
+    <string name="create">新建</string>
+    <string name="delete_tip">删除提示</string>
+    <string name="delete_system_message">删除该条系统消息？</string>
+    <string name="delete_success">删除成功</string>
+    <string name="clear_all_success">清空成功</string>
+    <string name="login_failed">帐号或密码错误</string>
+    <string name="login_exception">无效输入</string>
+    <string name="file_browser">文件浏览器</string>
+    <string name="upload_text">上传</string>
+    <string name="download_text">下载</string>
+    <string name="now_allow_space">不能含有空格</string>
+    <string name="open">开启</string>
+    <string name="close">关闭</string>
+    <string name="search_advanced_team">搜索高级群</string>
+    <string name="net_broken">当前网络不可用</string>
+    <string name="nim_status_unlogin">未登录</string>
+    <string name="nim_status_connecting">连接中...</string>
+    <string name="nim_status_logining">登录中...</string>
+    <string name="copyright">Copyright ©1997-2019 网易公司版权所有</string>
+    <string name="user_not_exsit">该用户不存在</string>
+    <string name="user_tips">请检查你输入的帐号是否正确</string>
+    <string name="edit">编辑</string>
+
+    <!-- session -->
+    <string name="input_panel_guess">猜 拳</string>
+    <string name="input_panel_audio_call">语音通话</string>
+    <string name="input_panel_video_call">视频通话</string>
+    <string name="input_panel_file">发送文件</string>
+    <string name="input_panel_RTS">白 板</string>
+    <string name="input_panel_snapchat">阅后即焚</string>
+    <string name="input_panel_tip">Tip</string>
+    <string name="input_panel_ack_msg">已读回执</string>
+    <string name="message_history_query">云消息记录</string>
+    <string name="message_search_title">搜索本地消息记录</string>
+    <string name="message_clear">清空本地消息记录</string>
+    <string name="message_info">聊天信息</string>
+
+    <!-- 通讯录 -->
+    <string name="add_friend">加为好友</string>
+    <string name="remove_friend">删除好友</string>
+    <string name="begin_chat">聊天</string>
+    <string name="remove_friend_tip">删除好友后，将同时解除双方的好友关系</string>
+    <string name="remove_friend_success">删除好友成功</string>
+    <string name="add_friend_self_tip">不能添加自己为好友</string>
+    <string name="add_friend_verify_tip">好友验证请求</string>
+    <string name="black_list_tip">你不会接收到列表中联系人的任何消息</string>
+
+    <!-- 群 -->
+    <string name="add_buddy">添加好友</string>
+    <string name="create_normal_team">创建讨论组</string>
+    <string name="team_apply_sending">发送中…</string>
+    <string name="no_team">您还没有群</string>
+    <string name="no_normal_team">您还没有讨论组</string>
+    <string name="team_search_hint">请输入群号进行搜索</string>
+    <string name="team_number_not_exist">群号不存在</string>
+    <string name="team_join">加入群组</string>
+    <string name="team_join_success">成功加入群: %1$s</string>
+    <string name="team_apply_to_join_send_success">申请已发出</string>
+    <string name="has_exist_in_team">已经在群里</string>
+    <string name="team_num_limit">群数量已达上限</string>
+
+    <!-- 消息提醒 -->
+
+    <!-- 自定义通知 -->
+    <string name="custom_notification">自定义通知</string>
+    <string name="select_custom_notification_target">选择发送对象</string>
+    <string name="send_custom_notification_tip">请输入要发送的内容</string>
+    <string name="send_custom_notification_success">自定义通知发送成功</string>
+    <string name="send_custom_notification_failed">自定义通知发送失败</string>
+    <string name="send_custom_notification_to_buddy">发送给好友</string>
+    <string name="send_custom_notification_to_team">发送给群组</string>
+
+    <!-- 消息类型 -->
+    <string name="msg_type_image">图片</string>
+    <string name="msg_type_audio">语音</string>
+
+    <!-- location -->
+    <string name="location_navigate">导航</string>
+    <string name="location_loading">正在定位</string>
+    <string name="location_map">地图定位</string>
+    <string name="my_location">我的位置</string>
+    <string name="location_address_unkown">该位置信息暂无</string>
+    <string name="format_mylocation">我的位置：%s</string>
+    <string name="location_address_fail">获取位置信息失败</string>
+    <string name="tools_selected">选择工具</string>
+    <string name="friends_map_navigation_web">在网页中打开</string>
+    <string name="location_open_map_error">打开地图出错</string>
+
+    <!-- about -->
+    <string name="about_clear_msg_history">清空所有聊天记录</string>
+    <string name="clear_msg_history_success">聊天记录已清空</string>
+
+    <!-- 云信SDK所需文案 -->
+    <string name="nim_status_bar_multi_messages_incoming">%1$d位联系人有新消息</string>
+    <string name="nim_status_bar_ticker_text">%1$s有新消息</string>
+    <string name="nim_status_bar_image_message">%1$s发来一条图片消息</string>
+    <string name="nim_status_bar_audio_message">%1$s发来一条语音消息</string>
+    <string name="nim_status_bar_video_message">%1$s发来一条视频消息</string>
+    <string name="nim_status_bar_file_message">%1$s发来一条文件消息</string>
+    <string name="nim_status_bar_location_message">%1$s分享了一个地理位置</string>
+    <string name="nim_status_bar_notification_message">%1$s: 通知消息</string>
+    <string name="nim_status_bar_custom_message">%1$s: 【有新的患者咨询】</string>
+    <string name="nim_status_bar_unsupported_message">%1$s: 无法显示该内容</string>
+    <string name="nim_status_bar_hidden_msg_content">你收到一条新消息</string>
+
+    <!-- setting -->
+    <string name="settings">设置</string>
+    <string name="no_disturb">免打扰</string>
+    <string name="multiport_push">PC/Web在线推送</string>
+    <string name="msg_notice">消息提醒</string>
+    <string name="recent_sticky">消息置顶</string>
+    <string name="setting_about">关于</string>
+    <string name="setting_close">已关闭</string>
+    <string name="no_disturb_tips">在设定的时间段内云信消息提醒将不再响铃振动</string>
+    <string name="time_from">从</string>
+    <string name="time_to">至</string>
+    <string name="time_from_default">22:00</string>
+    <string name="time_to_default">08:00</string>
+    <string name="black_list">黑名单</string>
+    <string name="msg_speaker">听筒模式</string>
+    <string name="ring">响铃模式</string>
+    <string name="vibrate">振动模式</string>
+    <string name="led">自定义呼吸灯</string>
+    <string name="notice_content">通知栏标题定制</string>
+    <string name="clear_index">清理全文检索缓存</string>
+    <string name="clear_sdk_cache">清理SDK文件缓存</string>
+    <string name="push_no_detail">推送不展示消息详情</string>
+    <string name="operation_too_frequent">操作太频繁</string>
+    <string name="setting_private_config">私有化配置</string>
+    <string name="private_config_note"> \n 1.私有化配置的将在app重启后生效，请注销登陆并杀掉进程。
+        \n 2.如果要切换到环境，关闭或打开开关退出登陆杀掉进程即可。\n </string>
+    <string name="local_db_migration">本地消息牵移</string>
+    <!-- 多端登录 -->
+    <string name="multiport_manager">多端登录管理</string>
+    <string name="multiport_logout">下线</string>
+    <string name="computer_version">云信电脑版</string>
+    <string name="web_version">云信网页版</string>
+    <string name="mobile_version">云信移动版</string>
+    <string name="multiport_logging">正在使用</string>
+    <string name="kickout_notify">下线通知</string>
+    <string name="kickout_content">你的帐号被%1$s踢出下线，请确定帐号信息安全</string>
+
+    <!-- 多端在线类型 -->
+    <string name="on_line">在线</string>
+    <string name="on_line_pc">PC在线</string>
+    <string name="on_line_mac">Mac在线</string>
+    <string name="on_line_web">web在线</string>
+    <string name="client_aos">Android</string>
+    <string name="client_ios">iOS</string>
+    <string name="on_line_busy">忙碌</string>
+    <string name="off_line">离线</string>
+
+    <!-- 阅后即焚 -->
+    <string name="snapchat_longclick_to_view">按住查看</string>
+
+    <!-- 个人名片 -->
+    <string name="birthday">生 日</string>
+    <string name="phone">手 机</string>
+    <string name="email">邮 箱</string>
+    <string name="signature">签 名</string>
+    <string name="head">头 像</string>
+    <string name="user_information">个人信息</string>
+    <string name="nickname">昵 称</string>
+    <string name="alias">备注名</string>
+    <string name="gender">性 别</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="other">其他</string>
+    <string name="phone_number">手机号码</string>
+    <string name="set_head_image">设置头像</string>
+    <string name="user_info_update_success">设置成功</string>
+    <string name="user_info_update_cancel">取消更新</string>
+    <string name="user_info_update_failed">设置失败，请重试</string>
+    <string name="head_update_success">头像设置成功</string>
+    <string name="head_update_failed">头像设置失败，请重试</string>
+    <string name="nickname_empty">昵称不能为空</string>
+
+    <!-- JsBridge -->
+    <string name="js_bridge">NIM JS Bridge</string>
+    <string name="js_bridge_demonstration">Js Bridge演示</string>
+
+    <!--机器人-->
+    <string name="nim_robot_title">云小信机器人</string>
+    <string name="robot_start_chat">开始对话</string>
+
+    <!-- 已读回执 -->
+    <string name="send_ack_msg">发送已读回执消息</string>
+    <string name="ack_msg_info">消息已读详情</string>
+    <string name="ack_msg_tip">已读回执能力支持文本、图片、音频、视频、文件、自定义等消息类型。此处仅以文本消息作为演示，开发者可以根据具体业务场景进行功能设计。</string>
+
+</resources>

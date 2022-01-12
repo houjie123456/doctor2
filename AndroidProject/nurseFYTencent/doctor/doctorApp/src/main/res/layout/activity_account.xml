@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="#fff">
+
+    <ImageView
+        android:id="@+id/imageView29"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_user_center_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.RoundImageView
+        android:id="@+id/account_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/img_me_photo"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView29"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/myTextView31"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="22dp"
+        android:gravity="left|center_vertical"
+        android:text="昵称"
+        android:textColor="#232323"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView29" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/account_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:text=""
+        android:textColor="#525252"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView31"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView31"
+        app:layout_constraintRight_toLeftOf="@+id/imageView30"
+        app:layout_constraintTop_toTopOf="@+id/myTextView31"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/imageView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/img_auth_more"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView31"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView31" />
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/myTextView31"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView31"></LinearLayout>
+
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/myTextView32"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="22dp"
+        android:gravity="left|center_vertical"
+        android:text="手机号码"
+        android:textColor="#232323"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/account_mobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:text=""
+        android:textColor="#525252"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView32"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView32"
+        app:layout_constraintRight_toLeftOf="@+id/imageView31"
+        app:layout_constraintTop_toTopOf="@+id/myTextView32"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/img_auth_more"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView32"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView32" />
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView32"
+        android:visibility="gone"></LinearLayout>
+
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/myTextView33"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="22dp"
+        android:gravity="left|center_vertical"
+        android:text="微信"
+        android:textColor="#232323"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line2"
+        android:visibility="gone"/>
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/account_wx_bind"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:text="未绑定"
+        android:textColor="@color/base_red_color"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView33"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView33"
+        app:layout_constraintRight_toLeftOf="@+id/imageView32"
+        app:layout_constraintTop_toTopOf="@+id/myTextView33"
+        android:paddingRight="10dp"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/imageView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/img_auth_more"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView33"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView33"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView33"></LinearLayout>
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/myTextView34"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="22dp"
+        android:gravity="left|center_vertical"
+        android:text="去好评"
+        android:textColor="#232323"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/account_agree"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:text=""
+        android:textColor="#f9f9f9"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView34"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView34"
+        app:layout_constraintRight_toLeftOf="@+id/imageView33"
+        app:layout_constraintTop_toTopOf="@+id/myTextView34"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/imageView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/img_auth_more"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView34"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView34" />
+
+    <LinearLayout
+        android:id="@+id/line4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/myTextView34"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView34"></LinearLayout>
+
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/myTextView35"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="22dp"
+        android:gravity="left|center_vertical"
+        android:text="当前版本"
+        android:textColor="#232323"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line4" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/account_version"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:text=""
+        android:textColor="#525252"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView35"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView35"
+        app:layout_constraintRight_toLeftOf="@+id/imageView34"
+        app:layout_constraintTop_toTopOf="@+id/myTextView35"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/img_auth_more"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView35"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView35" />
+
+    <LinearLayout
+        android:id="@+id/line5"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/myTextView35"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView35"></LinearLayout>
+
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/myTextView36"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginLeft="22dp"
+        android:gravity="left|center_vertical"
+        android:text="关于我们"
+        android:textColor="#232323"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line5" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/account_about"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="right|center_vertical"
+        android:text=""
+        android:textColor="#f9f9f9"
+        android:textSize="@dimen/font_14"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView36"
+        app:layout_constraintLeft_toRightOf="@+id/myTextView36"
+        app:layout_constraintRight_toLeftOf="@+id/imageView35"
+        app:layout_constraintTop_toTopOf="@+id/myTextView36"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/imageView35"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="23dp"
+        android:background="@drawable/img_auth_more"
+        app:layout_constraintBottom_toBottomOf="@+id/myTextView36"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/myTextView36" />
+    <LinearLayout
+        android:id="@+id/line501"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/myTextView36"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myTextView36"></LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/line6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#f4f4f4"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line501"
+        app:layout_constraintBottom_toTopOf="@+id/line">
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/account_btn"
+            android:layout_width="160dp"
+            android:layout_height="49dp"
+            android:background="#fff"
+            android:gravity="center"
+            android:text="退出登录"
+            android:textColor="@color/base_red_color"
+            android:textSize="@dimen/font_16"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="5dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/about"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/serve_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:text="@string/serve_txt"
+            android:textColor="@color/base_red_color"
+            android:textSize="@dimen/font_12"/>
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="|"
+            android:textColor="@color/base_red_color"
+            android:textSize="@dimen/font_12"/>
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/secret_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:text="@string/secret_txt"
+            android:textColor="@color/base_red_color"
+            android:textSize="@dimen/font_12"/>
+
+    </LinearLayout>
+
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="#f4f4f4"
+        android:text="@string/about_company"
+        android:gravity="center_horizontal|bottom"
+        android:lineSpacingExtra="8dp"
+        android:paddingBottom="15dp"
+        android:textColor="#898989"
+        android:textSize="@dimen/font_12"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

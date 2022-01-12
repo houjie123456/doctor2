@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/doctor.iml" filepath="$PROJECT_DIR$/doctor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/doctorApp/doctor.doctorApp.iml" filepath="$PROJECT_DIR$/.idea/modules/doctorApp/doctor.doctorApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-893028292/doctor.tuicalling.iml" filepath="$PROJECT_DIR$/.idea/modules/-893028292/doctor.tuicalling.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1684549186/doctor.tuichat.iml" filepath="$PROJECT_DIR$/.idea/modules/-1684549186/doctor.tuichat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-209189188/doctor.tuicontact.iml" filepath="$PROJECT_DIR$/.idea/modules/-209189188/doctor.tuicontact.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1417478932/doctor.tuiconversation.iml" filepath="$PROJECT_DIR$/.idea/modules/1417478932/doctor.tuiconversation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/917951308/doctor.tuicore.iml" filepath="$PROJECT_DIR$/.idea/modules/917951308/doctor.tuicore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/460298716/doctor.tuigroup.iml" filepath="$PROJECT_DIR$/.idea/modules/460298716/doctor.tuigroup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2068344734/doctor.tuisearch.iml" filepath="$PROJECT_DIR$/.idea/modules/2068344734/doctor.tuisearch.iml" />
+    </modules>
+  </component>
+</project>

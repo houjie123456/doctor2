@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="54dp"
+        android:layout_height="59dp">
+
+        <LinearLayout
+            android:id="@+id/list_item_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/list_item_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#353535"
+                android:textSize="@dimen/font_13"/>
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:id="@+id/list_item_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#353535"
+                android:textSize="@dimen/font_13"
+                android:layout_marginTop="5dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/list_item_right_top_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/layer_face_grid_right_top_style"
+            android:layout_gravity="top|right"
+            android:orientation="vertical"
+            android:gravity="right|top"
+            android:paddingTop="1dp"
+            android:paddingRight="2dp">
+
+            <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="@dimen/font_08"
+                android:text="预"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/list_item_second_layout"
+        android:layout_width="54dp"
+        android:layout_height="59dp">
+
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/list_item_title_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#353535"
+            android:textSize="@dimen/font_13"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/list_item_image_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/img_work_face_no"/>
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/list_item_three_layout"
+        android:layout_width="54dp"
+        android:layout_height="59dp">
+
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/list_item_title_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#353535"
+            android:textSize="@dimen/font_13"
+            android:layout_gravity="center"/>
+
+        <ImageView
+            android:id="@+id/list_item_image_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/img_work_face_no"/>
+    </FrameLayout>
+</LinearLayout>

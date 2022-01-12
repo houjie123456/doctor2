@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="#fff">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base_disease"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="报告类型："
+        android:textColor="#ff333333"
+        android:textSize="13sp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout"/>
+    <TextView
+        android:id="@+id/report_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="住院"
+        android:textColor="#3C8AF5"
+        android:textSize="13sp"
+        app:layout_constraintLeft_toRightOf="@+id/textView01"
+        app:layout_constraintTop_toTopOf="@+id/textView01"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_triangle"
+        android:layout_marginLeft="6dp"
+        app:layout_constraintLeft_toRightOf="@+id/report_type"
+        app:layout_constraintTop_toTopOf="@+id/report_type"
+        app:layout_constraintBottom_toBottomOf="@+id/report_type"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="采集日期："
+        android:textColor="#ff333333"
+        android:textSize="13sp"
+        app:layout_constraintRight_toLeftOf="@+id/start_date"
+        app:layout_constraintTop_toTopOf="@+id/start_date"/>
+    <TextView
+        android:id="@+id/start_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2020-03-16"
+        android:textColor="#3C8AF5"
+        android:textSize="13sp"
+        android:layout_marginRight="6dp"
+        app:layout_constraintRight_toLeftOf="@+id/img_triangle"
+        app:layout_constraintTop_toTopOf="@+id/report_type"/>
+
+    <ImageView
+        android:id="@+id/img_triangle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_triangle"
+        android:layout_marginRight="25dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/start_date"
+        app:layout_constraintBottom_toBottomOf="@+id/start_date"/>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/report_type">
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/examine_report_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#f4f4f4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/examine_report_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/layer_work_bg_style"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <LinearLayout
+        android:id="@+id/no_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/line1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/img_stop_face_no_record"/>
+
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/MyTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="暂无记录"
+            android:textSize="@dimen/font_12"
+            android:textColor="#777" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_item_duty_time_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date">
+    </androidx.recyclerview.widget.RecyclerView>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/no_time"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center">-->
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/img_work_face_no">-->
+<!--        </ImageView>-->
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/list_item_line3"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="#669BF0">
+    </LinearLayout>
+
+</LinearLayout>

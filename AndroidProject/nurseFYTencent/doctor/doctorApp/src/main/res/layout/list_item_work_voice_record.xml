@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff">
+
+    <LinearLayout
+        android:id="@+id/list_item_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </LinearLayout>
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.RoundImageView
+        android:id="@+id/list_item_person_image"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_line2"
+        android:background="@drawable/img_person" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="26dp"
+        android:text="姓名"
+        android:textColor="#4d4d4d"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_person_image"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_person_image"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image" />
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="26dp"
+        android:text="男"
+        android:textColor="#4d4d4d"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_person_image"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_name"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image" />
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="26dp"
+        android:text="0岁"
+        android:textColor="#4d4d4d"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_person_image"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_sex"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image" />
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="26dp"
+        android:text="已完成"
+        android:textColor="#fff "
+        android:textSize="@dimen/font_12"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_person_image"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_age"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image"
+        android:background="@drawable/shape_corner_state"/>
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:text="预约时长:"
+        android:textColor="#777"
+        android:textSize="@dimen/font_13"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_person_image"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_person_image"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image" />
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:text="0分钟"
+        android:textColor="#000"
+        android:textSize="@dimen/font_13"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_person_image"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_txt"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image" />
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_pay_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_corner"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingBottom="2dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="24dp"
+        android:text="已支付"
+        android:textColor="#ff747d "
+        android:textSize="@dimen/font_12"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_person_image"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_time"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image" />
+
+    <ImageView
+        android:id="@+id/list_item_btn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/list_item_person_image"
+        app:srcCompat="@drawable/voice_call"/>
+    <LinearLayout
+        android:id="@+id/voice_record_info"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_person_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/textView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_marginLeft="16dp"
+            android:text="当前审核状态："
+            android:textColor="#777"
+            android:textSize="@dimen/font_14"/>
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/voice_record_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="100"
+            android:text="已审核"
+            android:textColor="#7AD072"
+            android:textSize="@dimen/font_14"
+            android:layout_marginRight="12dp"/>
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/voice_record_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:text="详情"
+            android:textColor="#777"
+            android:textSize="@dimen/font_14"
+            android:layout_marginRight="12dp"/>
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="16dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:srcCompat="@drawable/img_auth_more" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/list_item_line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/voice_record_info"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

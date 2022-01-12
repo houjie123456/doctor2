@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff">
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.RoundImageView
+        android:id="@+id/list_item_person_image"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_person" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="姓名"
+        android:textColor="#000"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_person_image"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_person_image"/>
+
+    <ImageView
+        android:id="@+id/stars5"
+        android:layout_width="14dp"
+        android:layout_height="13dp"
+        android:src="@drawable/xing"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image"
+        app:layout_constraintRight_toRightOf="parent"/>
+    <ImageView
+        android:id="@+id/stars4"
+        android:layout_width="14dp"
+        android:layout_height="13dp"
+        android:src="@drawable/xing"
+        android:layout_marginRight="4dp"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image"
+        app:layout_constraintRight_toLeftOf="@+id/stars5"/>
+    <ImageView
+        android:id="@+id/stars3"
+        android:layout_width="14dp"
+        android:layout_height="13dp"
+        android:src="@drawable/xing"
+        android:layout_marginRight="4dp"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image"
+        app:layout_constraintRight_toLeftOf="@+id/stars4"/>
+    <ImageView
+        android:id="@+id/stars2"
+        android:layout_width="14dp"
+        android:layout_height="13dp"
+        android:src="@drawable/xing"
+        android:layout_marginRight="4dp"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image"
+        app:layout_constraintRight_toLeftOf="@+id/stars3"/>
+    <ImageView
+        android:id="@+id/stars1"
+        android:layout_width="14dp"
+        android:layout_height="13dp"
+        android:src="@drawable/xing"
+        android:layout_marginRight="4dp"
+        app:layout_constraintTop_toTopOf="@+id/list_item_person_image"
+        app:layout_constraintRight_toLeftOf="@+id/stars2"/>
+
+    
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_evaluate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间时间"
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_item_person_image"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="10dp"/>
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2010-12-34"
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/list_item_evaluate"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#f4f4f4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_time"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

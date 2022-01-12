@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <include
+        android:id="@+id/head_layout"
+        layout="@layout/layout_head_base"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/list_item_line1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/head_layout"></LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/layout01"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:gravity="center_vertical"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/list_item_line1">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginLeft="16dp"-->
+            <!--android:text="患者手机号"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textSize="16sp" />-->
+
+        <!--<EditText-->
+            <!--android:id="@+id/pat_mobile"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#fff"-->
+            <!--android:ems="10"-->
+            <!--android:gravity="right"-->
+            <!--android:hint="请输入手机号"-->
+            <!--android:inputType="number"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:textColor="#3b3b3b"-->
+            <!--android:textColorHint="#a8a8a8"-->
+            <!--android:textSize="14sp"-->
+            <!--android:layout_marginRight="20dp"/>-->
+
+    <!--</LinearLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_line1"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_mid01"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/line2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="住院号"
+            android:layout_weight="1"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/hospital_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:ems="7"
+            android:gravity="right"
+            android:layout_weight="60"
+            android:hint="请输入住院号"
+            android:inputType="number"
+            android:layout_marginLeft="15dp"
+            android:textColor="#3b3b3b"
+            android:textColorHint="#a8a8a8"
+            android:textSize="14sp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/get_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查询"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:paddingLeft="13dp"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:paddingRight="13dp"
+            android:textSize="14sp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_corner_state"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line201"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_mid01"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout03"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/line201">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="住院患者信息"
+            android:layout_weight="1"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/pat_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="暂无"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:layout_marginRight="20dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/line202"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#f4f4f4"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout03"></LinearLayout>
+
+    <com.company.wanbei.app.util.recycler.SlideRecyclerView
+        android:id="@+id/disease_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/line202">
+
+    </com.company.wanbei.app.util.recycler.SlideRecyclerView>
+<!--    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView-->
+<!--        android:id="@+id/myTextView101"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:paddingBottom="15dp"-->
+<!--        android:paddingLeft="16dp"-->
+<!--        android:paddingRight="16dp"-->
+<!--        android:paddingTop="15dp"-->
+<!--        android:text="是否为复诊患者"-->
+<!--        android:textColor="#525252"-->
+<!--        android:textSize="@dimen/font_15"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/disease_recycle" />-->
+<!--    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView-->
+<!--        android:id="@+id/switch_on_txt"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:text="是"-->
+<!--        android:textColor="#fff"-->
+<!--        android:textSize="@dimen/font_16"-->
+<!--        app:layout_constraintLeft_toLeftOf="@+id/switch_btn"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/switch_btn"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/switch_btn"/>-->
+<!--    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView-->
+<!--        android:id="@+id/switch_off_txt"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        android:text="否"-->
+<!--        android:textColor="#8e8e8e"-->
+<!--        android:textSize="@dimen/font_16"-->
+<!--        app:layout_constraintRight_toRightOf="@+id/switch_btn"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/switch_btn"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/switch_btn"/>-->
+<!--    <Switch-->
+<!--        android:id="@+id/switch_btn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginRight="20dp"-->
+<!--        android:switchMinWidth="40dp"-->
+<!--        android:thumb="@drawable/switch_custom_thumb_selector"-->
+<!--        android:track="@drawable/switch_custom_track_selector"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/myTextView101"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/myTextView101"/>-->
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4"
+        android:paddingBottom="13dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="13dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disease_recycle" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="药品记录"
+            android:layout_weight="1"
+            android:textColor="#8e8e8e"
+            android:textSize="@dimen/font_14"/>
+        <TextView
+            android:id="@+id/add_drugs_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="＋ 添加药品"
+            android:textColor="#2D6FF1"
+            android:textSize="@dimen/font_14"/>
+    </LinearLayout>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/work_recipe_record_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#f4f4f4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3"
+        app:layout_constraintBottom_toTopOf="@+id/create_recipe_btn">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/work_recipe_no_record_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/create_recipe_btn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3">
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_stop_face_no_record" />
+
+        <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+            android:id="@+id/myTextView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="暂无药品"
+            android:textColor="#bdbcdc"
+            android:textSize="@dimen/font_14"
+            app:layout_constraintLeft_toLeftOf="@+id/imageView13"
+            app:layout_constraintRight_toRightOf="@+id/imageView13"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/create_recipe_btn"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:background="@color/base_red_color"
+        android:gravity="center"
+        android:text="确定创建"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

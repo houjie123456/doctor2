@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp">
+
+
+    <ImageView
+        android:id="@+id/list_item_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_doctor_temp" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_job"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_order_face_list_job_style"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:text="主治医生"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_10"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_image"
+        app:layout_constraintLeft_toLeftOf="@+id/list_item_image"
+        app:layout_constraintRight_toRightOf="@+id/list_item_image" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:text="名字"
+        android:textColor="#000"
+        android:textSize="@dimen/font_16"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_image"
+        app:layout_constraintTop_toTopOf="@+id/list_item_image" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_name"
+        app:layout_constraintLeft_toRightOf="@+id/list_item_name"
+        app:srcCompat="@drawable/img_order_face_star" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="9.8"
+        android:textColor="#ff7d01"
+        android:textSize="@dimen/font_15"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_name"
+        app:layout_constraintLeft_toRightOf="@+id/imageView22"
+        app:layout_constraintTop_toTopOf="@+id/list_item_name" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="呼吸内科  安徽省立"
+        android:textColor="#525252"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintLeft_toLeftOf="@+id/list_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_name" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="擅长："
+        android:textColor="#8e8e8e"
+        android:textSize="@dimen/font_12"
+        app:layout_constraintLeft_toLeftOf="@+id/list_item_name"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_address" />
+
+    <com.tencent.qcloud.tuikit.tuichat.fromApp.view.MyTextView
+        android:id="@+id/list_item_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_add_drugs_btn_style"
+        android:text="预约"
+        android:textColor="#fff"
+        android:textSize="@dimen/font_11"
+        app:layout_constraintBottom_toBottomOf="@+id/list_item_address"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/list_item_name" />
+
+    <LinearLayout
+        android:id="@+id/list_item_line1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_item_time"></LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

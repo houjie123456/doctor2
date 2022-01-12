@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="25dp"
+    android:paddingTop="10dp"
+    android:background="@drawable/disekuai">
+
+    <ImageView
+        android:id="@+id/article_image"
+        android:layout_width="115dp"
+        android:layout_height="95dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/article_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="阜阳市人民医院纪委召开纪委会议"
+        android:textColor="#ff1b1b1b"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="7dp"
+        app:layout_constraintLeft_toRightOf="@+id/article_image"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/article_image"/>
+    <ImageView
+        android:id="@+id/img_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/time"
+        app:layout_constraintTop_toBottomOf="@+id/article_title"
+        app:layout_constraintBottom_toTopOf="@+id/speaker"
+        app:layout_constraintLeft_toLeftOf="@+id/article_title"/>
+    <TextView
+        android:id="@+id/article_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2020年6月28日9:00-11:00"
+        android:textColor="#ff999999"
+        android:textSize="11sp"
+        android:layout_marginLeft="4dp"
+        app:layout_constraintLeft_toRightOf="@+id/img_time"
+        app:layout_constraintTop_toTopOf="@+id/img_time"
+        app:layout_constraintBottom_toBottomOf="@+id/img_time"/>
+    <TextView
+        android:id="@+id/speaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="主讲人：郭海涛、尹青峰"
+        android:textColor="#ff999999"
+        android:textSize="11sp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/article_image"
+        app:layout_constraintLeft_toLeftOf="@+id/article_title"/>
+
+    <LinearLayout
+        android:id="@+id/desc_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/button_home"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详情"
+            android:textColor="#ffffffff"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
